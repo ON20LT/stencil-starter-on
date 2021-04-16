@@ -6,73 +6,49 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ExampleComponent {
-        "exampleProp": string;
-        "exampleToUpperCase": () => Promise<void>;
+    interface MsFotogalerie {
+        "image": string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface MsSlideshow {
+        "slideshow_eins": string;
     }
 }
 declare global {
-    interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
+    interface HTMLMsFotogalerieElement extends Components.MsFotogalerie, HTMLStencilElement {
     }
-    var HTMLExampleComponentElement: {
-        prototype: HTMLExampleComponentElement;
-        new (): HTMLExampleComponentElement;
+    var HTMLMsFotogalerieElement: {
+        prototype: HTMLMsFotogalerieElement;
+        new (): HTMLMsFotogalerieElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMsSlideshowElement extends Components.MsSlideshow, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMsSlideshowElement: {
+        prototype: HTMLMsSlideshowElement;
+        new (): HTMLMsSlideshowElement;
     };
     interface HTMLElementTagNameMap {
-        "example-component": HTMLExampleComponentElement;
-        "my-component": HTMLMyComponentElement;
+        "ms-fotogalerie": HTMLMsFotogalerieElement;
+        "ms-slideshow": HTMLMsSlideshowElement;
     }
 }
 declare namespace LocalJSX {
-    interface ExampleComponent {
-        "exampleProp"?: string;
-        "onExampleEvent"?: (event: CustomEvent<string>) => void;
+    interface MsFotogalerie {
+        "image"?: string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface MsSlideshow {
+        "slideshow_eins"?: string;
     }
     interface IntrinsicElements {
-        "example-component": ExampleComponent;
-        "my-component": MyComponent;
+        "ms-fotogalerie": MsFotogalerie;
+        "ms-slideshow": MsSlideshow;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
+            "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
         }
     }
 }
