@@ -15,7 +15,9 @@ export class Newsletter {
         return (
           <Host>
               <footer>
-                <div class="test">
+                <div class="newsletterRegistration">
+                    <h2>Melde dich jetzt zu unserem Newsletter an</h2>
+                    <p>LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM</p>
                     <input>inputfeld 1</input>
                     <input>inputfeld 2</input>
                     <input>mailadresse</input>

@@ -4,21 +4,29 @@
     
 }
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22;
+    color: #E7E9EE;
+}
+
 input {
-    background-color: red;
+    background-color: #E7E9EE;
 }
 
 button {
-    color: red;
-    background-color: royalblue;
+    color:  #E7E9EE;
+    background-color: #5A6794;
+    border-radius: 30px;
 }
 
-.test {
+.newsletterRegistration {
     padding: 20px;
     margin: 20px;
-    background-color: seagreen;
+    background-color: #8794C0;
+    border-radius: 10px;
 }
 footer {
-    background-color: black;
+    background-color: #5A6794;
     padding: 100px;
 }
