@@ -12,6 +12,12 @@ export namespace Components {
     interface MsSlideshow {
         "slideshow_eins": string;
     }
+    interface OnbnbDarkmode {
+        "dmode": HTMLElement;
+        "dmpruefer": number;
+        "moon": HTMLElement;
+        "sun": HTMLElement;
+    }
 }
 declare global {
     interface HTMLMsFotogalerieElement extends Components.MsFotogalerie, HTMLStencilElement {
@@ -26,9 +32,16 @@ declare global {
         prototype: HTMLMsSlideshowElement;
         new (): HTMLMsSlideshowElement;
     };
+    interface HTMLOnbnbDarkmodeElement extends Components.OnbnbDarkmode, HTMLStencilElement {
+    }
+    var HTMLOnbnbDarkmodeElement: {
+        prototype: HTMLOnbnbDarkmodeElement;
+        new (): HTMLOnbnbDarkmodeElement;
+    };
     interface HTMLElementTagNameMap {
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
+        "onbnb-darkmode": HTMLOnbnbDarkmodeElement;
     }
 }
 declare namespace LocalJSX {
@@ -38,9 +51,16 @@ declare namespace LocalJSX {
     interface MsSlideshow {
         "slideshow_eins"?: string;
     }
+    interface OnbnbDarkmode {
+        "dmode"?: HTMLElement;
+        "dmpruefer"?: number;
+        "moon"?: HTMLElement;
+        "sun"?: HTMLElement;
+    }
     interface IntrinsicElements {
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
+        "onbnb-darkmode": OnbnbDarkmode;
     }
 }
 export { LocalJSX as JSX };
@@ -49,6 +69,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
+            "onbnb-darkmode": LocalJSX.OnbnbDarkmode & JSXBase.HTMLAttributes<HTMLOnbnbDarkmodeElement>;
         }
     }
 }

@@ -1,0 +1,82 @@
+.icon img{
+  width: 33px;
+  position: absolute;
+  margin-top: 1px;
+  margin-left: -50px;
+}
+
+#sun {
+  display: block;
+}
+
+#moon {
+  display: none;
+}
+
+.switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: absolute;
+    right: 2%;
+    top: 4%;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  #e7e9ee;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color:  white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #d8cdb0;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #d8cdb0;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .dark-mode {
+    background: #202020;
+    color: #e7e9ee;
+}

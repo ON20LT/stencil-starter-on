@@ -1,0 +1,24 @@
+body {
+  background: #e7e9ee;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.borderline {
+  width: 100%;
+  margin-top: 0%;
+  height: 90px;
+  background: #1c2135;
+}
+
+#logo {
+  width: auto;
+  height: 50px;
+  margin-left: 1%;
+  margin-top: 20px;
+  margin-bottom: 2%;
+}
+
+.dark-mode {
+  background: #202020;
+  color: #e7e9ee;
+}
