@@ -18,6 +18,22 @@ export namespace Components {
         "moon": HTMLElement;
         "sun": HTMLElement;
     }
+    interface OnbnbSearch {
+        "aus": HTMLElement;
+        "checkin": HTMLInputElement;
+        "checkout": HTMLInputElement;
+        "datum": HTMLElement;
+        "ee": HTMLElement;
+        "gaeste": HTMLInputElement;
+        "gaesteanzahl": HTMLElement;
+        "heute": Date;
+        "menuleiste": HTMLElement;
+        "ort": HTMLInputElement;
+        "suche": HTMLElement;
+        "sucheaus": HTMLElement;
+        "sucherund": HTMLElement;
+        "tageimMonat": number[];
+    }
 }
 declare global {
     interface HTMLMsFotogalerieElement extends Components.MsFotogalerie, HTMLStencilElement {
@@ -38,10 +54,17 @@ declare global {
         prototype: HTMLOnbnbDarkmodeElement;
         new (): HTMLOnbnbDarkmodeElement;
     };
+    interface HTMLOnbnbSearchElement extends Components.OnbnbSearch, HTMLStencilElement {
+    }
+    var HTMLOnbnbSearchElement: {
+        prototype: HTMLOnbnbSearchElement;
+        new (): HTMLOnbnbSearchElement;
+    };
     interface HTMLElementTagNameMap {
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
         "onbnb-darkmode": HTMLOnbnbDarkmodeElement;
+        "onbnb-search": HTMLOnbnbSearchElement;
     }
 }
 declare namespace LocalJSX {
@@ -57,10 +80,27 @@ declare namespace LocalJSX {
         "moon"?: HTMLElement;
         "sun"?: HTMLElement;
     }
+    interface OnbnbSearch {
+        "aus"?: HTMLElement;
+        "checkin"?: HTMLInputElement;
+        "checkout"?: HTMLInputElement;
+        "datum"?: HTMLElement;
+        "ee"?: HTMLElement;
+        "gaeste"?: HTMLInputElement;
+        "gaesteanzahl"?: HTMLElement;
+        "heute"?: Date;
+        "menuleiste"?: HTMLElement;
+        "ort"?: HTMLInputElement;
+        "suche"?: HTMLElement;
+        "sucheaus"?: HTMLElement;
+        "sucherund"?: HTMLElement;
+        "tageimMonat"?: number[];
+    }
     interface IntrinsicElements {
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
         "onbnb-darkmode": OnbnbDarkmode;
+        "onbnb-search": OnbnbSearch;
     }
 }
 export { LocalJSX as JSX };
@@ -70,6 +110,7 @@ declare module "@stencil/core" {
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
             "onbnb-darkmode": LocalJSX.OnbnbDarkmode & JSXBase.HTMLAttributes<HTMLOnbnbDarkmodeElement>;
+            "onbnb-search": LocalJSX.OnbnbSearch & JSXBase.HTMLAttributes<HTMLOnbnbSearchElement>;
         }
     }
 }
