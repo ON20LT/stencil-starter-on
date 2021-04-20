@@ -31,31 +31,37 @@ export class suchleiste {
   @State() valuebm: number = this.valuevm;
 
   private datummorgent = () => {
-    if ((this.valuevt + 1) > this.tageimMonat[this.heute.getMonth()]){
+    if ((this.valuebt + 1) > this.tageimMonat[this.heute.getMonth()]){
       if ((this.valuevm + 1) === 12) {
         this.valuebj = this.valuevj +1;
         this.valuebm = 1;
       } else {
-        this.valuebm = this.valuevm +1;
+        this.valuebm = this.valuebm +1;
       }
       this.valuebt = 1;
     } else {
-      this.valuebt = (this.valuevt + 1);
+      this.valuebt = (this.valuebt + 1);
     }
   }
 
   private datummorgenm = () => {
-    if (this.valuevm == 12) {
+    if (this.valuebm == 12) {
       this.valuebj = this.valuevj +1;
       this.valuebm = 1;
     } else {
-      this.valuebm = (this.valuevm +1);
+      this.valuebm = (this.valuebm +1);
     }
+  }
+
+  private datummorgenj = () => {
+    this.valuebj = this.valuebj +1;
   }
 
   private goclick = () => {
     alert('Augen schließen und genießen... Danke und beehren Sie uns bald wieder, Ihr ONbnb-Team.');
   }
+
+
 
 
 
@@ -70,11 +76,11 @@ export class suchleiste {
 
           <div class="checkin">
               Check-In:
-              <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt} onChange={this.datummorgent} onClick={this.datummorgent}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm} onChange={this.datummorgenm} onClick={this.datummorgenm}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj}/></div>
+              <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt} onChange={this.datummorgent}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm} onChange={this.datummorgenm}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj} onChange={this.datummorgenj}/></div>
           </div>
           <div class="checkout">
               Check-Out:
-              <div class="eingabe"><input type='number' id="bisTag" min={1} max={31} value={this.valuebt}/>/<input type='number' id="bisMonat" min={1} max={12} value={this.valuebm}/>/<input type='number' id="bisJahr" min={2021} max={2030} value={this.valuevj}/></div>
+              <div class="eingabe"><input type='number' id="bisTag" min={1} max={31} value={this.valuebt}/>/<input type='number' id="bisMonat" min={1} max={12} value={this.valuebm}/>/<input type='number' id="bisJahr" min={2021} max={2030} value={this.valuebj}/></div>
           </div>
           <div class="gaeste">
               Gäste:
