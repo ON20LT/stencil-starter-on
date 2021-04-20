@@ -19,8 +19,6 @@ export namespace Components {
     interface OnbnbSuche {
         "checkin": HTMLElement;
         "checkout": HTMLElement;
-        "datummorgenm": () => number;
-        "datummorgent": () => number;
         "ee": HTMLElement;
         "gaeste": HTMLElement;
         "heute": Date;

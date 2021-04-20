@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Method, State } from '@stencil/core';
+import { Component, Host, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'onbnb-suche',
@@ -27,37 +27,31 @@ export class suchleiste {
   @State() valuevj: number = this.heute.getFullYear();
 
   @State() valuebj: number = this.valuevj;
-  @State() valuebt: number = this.datummorgent();
-  @State() valuebm: number = this.datummorgenm();
+  @State() valuebt: number = this.valuevt;
+  @State() valuebm: number = this.valuevm;
 
-
-  @Method() private datummorgent() {
-    let i: number = (this.valuevm -1);
-    if ((this.valuevt + 1) > this.tageimMonat[i]){
+  private datummorgent = () => {
+    if ((this.valuevt + 1) > this.tageimMonat[this.heute.getMonth()]){
       if ((this.valuevm + 1) === 12) {
         this.valuebj = this.valuevj +1;
         this.valuebm = 1;
       } else {
         this.valuebm = this.valuevm +1;
       }
-      return 1;
+      this.valuebt = 1;
     } else {
-      return (this.valuevt + 1);
+      this.valuebt = (this.valuevt + 1);
     }
   }
 
-  @Method() private datummorgenm() {
+  private datummorgenm = () => {
     if (this.valuevm == 12) {
       this.valuebj = this.valuevj +1;
-      return 1;
+      this.valuebm = 1;
     } else {
-      return (this.valuevm +1);
+      this.valuebm = (this.valuevm +1);
     }
   }
-
-
-
-
 
   render() {
     return (
@@ -70,11 +64,11 @@ export class suchleiste {
 
           <div class="checkin">
               Check-In:
-              <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj}/></div>
+              <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt} onChange={this.datummorgent} onClick={this.datummorgent}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm} onChange={this.datummorgenm} onClick={this.datummorgenm}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj}/></div>
           </div>
           <div class="checkout">
               Check-Out:
-              <div class="eingabe"><input type='number' id="bisTag" min={1} max={31} value={this.valuebt}/>/<input type='number' id="bisMonat" min={1} max={12} value={this.valuebm}/>/<input type='number' id="bisJahr" min={2021} max={2030} value={this.valuebj}/></div>
+              <div class="eingabe"><input type='number' id="bisTag" min={1} max={31} value={this.valuebt}/>/<input type='number' id="bisMonat" min={1} max={12} value={this.valuebm}/>/<input type='number' id="bisJahr" min={2021} max={2030} value={this.valuevj}/></div>
           </div>
           <div class="gaeste">
               Gäste:
