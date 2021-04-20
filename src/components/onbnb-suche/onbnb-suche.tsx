@@ -53,6 +53,12 @@ export class suchleiste {
     }
   }
 
+  private goclick = () => {
+    alert('Augen schließen und genießen... Danke und beehren Sie uns bald wieder, Ihr ONbnb-Team.');
+  }
+
+
+
   render() {
     return (
       <Host>
@@ -74,8 +80,7 @@ export class suchleiste {
               Gäste:
               <input type='number' id='gaesteanzahl' name='Gästeanzahl' min={1} max={15} value={0}/>
           </div>
-              <button class="suche">GO</button>
-          <div class="ee"><iframe src="https://giphy.com/embed/ckrbT1rPtrt1rGM19p" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a id="eetext" href="https://giphy.com/stickers/travel-world-globe-ckrbT1rPtrt1rGM19p">via GIPHY</a></p></div>
+              <button class="suche" onClick={this.goclick}>GO</button>
         </div>
       </Host>
     )
