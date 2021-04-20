@@ -20,13 +20,22 @@ button {
     border-radius: 30px;
 }
 
-.newsletterRegistration {
-    padding: 20px;
+form{
     margin: 20px;
+    padding: 20px;
     background-color: #8794C0;
     border-radius: 10px;
 }
 footer {
     background-color: #5A6794;
     padding: 100px;
+    width: 100%;
+}
+
+input {
+    color:  #5A6794;
+    border-style: none;
+    padding: 5px;
+    border-radius: 10px;
+
 }

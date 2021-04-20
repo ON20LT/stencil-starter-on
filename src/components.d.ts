@@ -6,9 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface LsFootertest {
+    }
     interface LsNewsletter {
-        "first": string;
-        "last": string;
     }
     interface MsFotogalerie {
         "image": string;
@@ -18,6 +18,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLLsFootertestElement extends Components.LsFootertest, HTMLStencilElement {
+    }
+    var HTMLLsFootertestElement: {
+        prototype: HTMLLsFootertestElement;
+        new (): HTMLLsFootertestElement;
+    };
     interface HTMLLsNewsletterElement extends Components.LsNewsletter, HTMLStencilElement {
     }
     var HTMLLsNewsletterElement: {
@@ -37,15 +43,16 @@ declare global {
         new (): HTMLMsSlideshowElement;
     };
     interface HTMLElementTagNameMap {
+        "ls-footertest": HTMLLsFootertestElement;
         "ls-newsletter": HTMLLsNewsletterElement;
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
     }
 }
 declare namespace LocalJSX {
+    interface LsFootertest {
+    }
     interface LsNewsletter {
-        "first"?: string;
-        "last"?: string;
     }
     interface MsFotogalerie {
         "image"?: string;
@@ -54,6 +61,7 @@ declare namespace LocalJSX {
         "slideshow_eins"?: string;
     }
     interface IntrinsicElements {
+        "ls-footertest": LsFootertest;
         "ls-newsletter": LsNewsletter;
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
@@ -63,6 +71,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ls-footertest": LocalJSX.LsFootertest & JSXBase.HTMLAttributes<HTMLLsFootertestElement>;
             "ls-newsletter": LocalJSX.LsNewsletter & JSXBase.HTMLAttributes<HTMLLsNewsletterElement>;
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
