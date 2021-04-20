@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop, Event, EventEmitter, Listen, Method } from '@stencil/core';
 
 @Component({
   tag: 'onbnb-search',
@@ -28,15 +28,25 @@ export class suchleiste {
   @Prop() tageimMonat = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 
+  // @Event() ortClick: EventEmitter<string>;
 
-  private ortclick = (event: Event) => {
-    this.ort.value="";
+  /*exampleHandler(ev: MouseEvent) {
+    console.log(ev)
+    this.exampleEvent.emit("custom value");
+  }*/
+
+  //  onClick={(ev)=>this.ortcklick(ev)}
+
+
+ ortclick = () => {
+    this.ort.value = "";
     (document.querySelector('.ortaus') as HTMLElement).style.display = 'flex';
     (document.querySelector('.gaesteaus') as HTMLElement).style.display = 'none';
     (document.querySelector('.datum') as HTMLElement).style.display = 'none';
+
   }
 
-  private checkinclick = (event: Event) => {
+  private checkinclick = () => {
     for (let i: number = 0; i < this.tageimMonat.length; i++){
       if (parseInt((document.querySelector('#vonTag') as HTMLInputElement).value) === i+1){
           (document.querySelector('#vonTag') as HTMLInputElement).max = this.tageimMonat[i].toString();
@@ -127,9 +137,23 @@ private gaesteanzahlchange = (event: Event) => {
     }
 }
 
-private sucherundenter = (event: Event) => {
-    this.sucherund.style.display = 'none';
-    this.sucheaus.style.display = 'flex';
+
+
+
+
+  @Listen("click")
+  clickListener() {
+  };
+
+  @Event() sucherundenterEvent: EventEmitter;
+
+sucherundenter (ev: MouseEvent) {
+    this.sucherundenterEvent.emit();
+}
+
+@Method() sucherundenterFkt() {
+  this.sucherund.style.display = 'none';
+  this.sucheaus.style.display = 'flex';
 }
 
 private sucherundleave = (event: Event) => {
@@ -169,8 +193,8 @@ private sucheausclick = (event: Event) => {
     return (
       <Host>
         <div class="menuleiste" onClick={this.menuleisteclick}>
-            <div class="ort" onClick={this.ortclick}>
-                <input type="String" id="ort" name="Ort" value="Ort"/>
+            <div class="ort">
+                <input type="String" id="ort" name="Ort" value="Ort" onClick={this.ortclick}/>
             </div>
 
             <div class="checkin" onClick={this.checkinclick}>
@@ -186,8 +210,8 @@ private sucheausclick = (event: Event) => {
             </div>
 
             <div class="suche">
-                <div class="sucherund" onMouseEnter={this.sucherundenter} onMouseLeave={this.sucherundleave}><img src="./search.png" id="search"/></div>
-                <button class="sucheaus" onMouseEnter={this.sucheausenter} onMouseLeave={this.sucheausleave} onClick={this.sucheausclick}>Suche <img src="./search.png" id="search"/></button>
+                <div class="sucherund" onMouseEnter={(ev)=>this.sucherundenter(ev)} onMouseLeave={this.sucherundleave}>GO</div>
+                <button class="sucheaus" onMouseEnter={this.sucheausenter} onMouseLeave={this.sucheausleave} onClick={this.sucheausclick}>Suche   GO</button>
             </div>
 
             <div class="ee"><iframe src="https://giphy.com/embed/ckrbT1rPtrt1rGM19p" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a id="eetext" href="https://giphy.com/stickers/travel-world-globe-ckrbT1rPtrt1rGM19p">via GIPHY</a></p></div>

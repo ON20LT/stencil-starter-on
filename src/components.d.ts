@@ -30,6 +30,7 @@ export namespace Components {
         "suche": HTMLElement;
         "sucheaus": HTMLElement;
         "sucherund": HTMLElement;
+        "sucherundenterFkt": () => Promise<void>;
         "tageimMonat": number[];
     }
 }
@@ -86,6 +87,7 @@ declare namespace LocalJSX {
         "gaesteanzahl"?: HTMLElement;
         "heute"?: Date;
         "menuleiste"?: HTMLElement;
+        "onSucherundenterEvent"?: (event: CustomEvent<any>) => void;
         "ort"?: HTMLInputElement;
         "suche"?: HTMLElement;
         "sucheaus"?: HTMLElement;
