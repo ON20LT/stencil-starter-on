@@ -16,21 +16,17 @@ export namespace Components {
         "dmode": HTMLElement;
         "dmpruefer": number;
     }
-    interface OnbnbSearch {
-        "aus": HTMLElement;
-        "checkin": HTMLInputElement;
-        "checkout": HTMLInputElement;
-        "datum": HTMLElement;
+    interface OnbnbSuche {
+        "checkin": HTMLElement;
+        "checkout": HTMLElement;
+        "datummorgenm": () => number;
+        "datummorgent": () => number;
         "ee": HTMLElement;
-        "gaeste": HTMLInputElement;
-        "gaesteanzahl": HTMLElement;
+        "gaeste": HTMLElement;
         "heute": Date;
         "menuleiste": HTMLElement;
-        "ort": HTMLInputElement;
+        "ort": HTMLElement;
         "suche": HTMLElement;
-        "sucheaus": HTMLElement;
-        "sucherund": HTMLElement;
-        "sucherundenterFkt": () => Promise<void>;
         "tageimMonat": number[];
     }
 }
@@ -53,17 +49,17 @@ declare global {
         prototype: HTMLOnbnbDarkmodeElement;
         new (): HTMLOnbnbDarkmodeElement;
     };
-    interface HTMLOnbnbSearchElement extends Components.OnbnbSearch, HTMLStencilElement {
+    interface HTMLOnbnbSucheElement extends Components.OnbnbSuche, HTMLStencilElement {
     }
-    var HTMLOnbnbSearchElement: {
-        prototype: HTMLOnbnbSearchElement;
-        new (): HTMLOnbnbSearchElement;
+    var HTMLOnbnbSucheElement: {
+        prototype: HTMLOnbnbSucheElement;
+        new (): HTMLOnbnbSucheElement;
     };
     interface HTMLElementTagNameMap {
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
         "onbnb-darkmode": HTMLOnbnbDarkmodeElement;
-        "onbnb-search": HTMLOnbnbSearchElement;
+        "onbnb-suche": HTMLOnbnbSucheElement;
     }
 }
 declare namespace LocalJSX {
@@ -77,28 +73,22 @@ declare namespace LocalJSX {
         "dmode"?: HTMLElement;
         "dmpruefer"?: number;
     }
-    interface OnbnbSearch {
-        "aus"?: HTMLElement;
-        "checkin"?: HTMLInputElement;
-        "checkout"?: HTMLInputElement;
-        "datum"?: HTMLElement;
+    interface OnbnbSuche {
+        "checkin"?: HTMLElement;
+        "checkout"?: HTMLElement;
         "ee"?: HTMLElement;
-        "gaeste"?: HTMLInputElement;
-        "gaesteanzahl"?: HTMLElement;
+        "gaeste"?: HTMLElement;
         "heute"?: Date;
         "menuleiste"?: HTMLElement;
-        "onSucherundenterEvent"?: (event: CustomEvent<any>) => void;
-        "ort"?: HTMLInputElement;
+        "ort"?: HTMLElement;
         "suche"?: HTMLElement;
-        "sucheaus"?: HTMLElement;
-        "sucherund"?: HTMLElement;
         "tageimMonat"?: number[];
     }
     interface IntrinsicElements {
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
         "onbnb-darkmode": OnbnbDarkmode;
-        "onbnb-search": OnbnbSearch;
+        "onbnb-suche": OnbnbSuche;
     }
 }
 export { LocalJSX as JSX };
@@ -108,7 +98,7 @@ declare module "@stencil/core" {
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
             "onbnb-darkmode": LocalJSX.OnbnbDarkmode & JSXBase.HTMLAttributes<HTMLOnbnbDarkmodeElement>;
-            "onbnb-search": LocalJSX.OnbnbSearch & JSXBase.HTMLAttributes<HTMLOnbnbSearchElement>;
+            "onbnb-suche": LocalJSX.OnbnbSuche & JSXBase.HTMLAttributes<HTMLOnbnbSucheElement>;
         }
     }
 }
