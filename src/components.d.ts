@@ -15,8 +15,6 @@ export namespace Components {
     interface OnbnbDarkmode {
         "dmode": HTMLElement;
         "dmpruefer": number;
-        "moon": HTMLElement;
-        "sun": HTMLElement;
     }
     interface OnbnbSearch {
         "aus": HTMLElement;
@@ -77,8 +75,6 @@ declare namespace LocalJSX {
     interface OnbnbDarkmode {
         "dmode"?: HTMLElement;
         "dmpruefer"?: number;
-        "moon"?: HTMLElement;
-        "sun"?: HTMLElement;
     }
     interface OnbnbSearch {
         "aus"?: HTMLElement;

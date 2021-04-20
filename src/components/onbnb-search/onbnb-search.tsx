@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'onbnb-search',
@@ -27,14 +27,16 @@ export class suchleiste {
 
   @Prop() tageimMonat = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-  private ortclick = () => {
+
+
+  private ortclick = (event: Event) => {
     this.ort.value="";
     (document.querySelector('.ortaus') as HTMLElement).style.display = 'flex';
     (document.querySelector('.gaesteaus') as HTMLElement).style.display = 'none';
     (document.querySelector('.datum') as HTMLElement).style.display = 'none';
   }
 
-  private checkinclick = () => {
+  private checkinclick = (event: Event) => {
     for (let i: number = 0; i < this.tageimMonat.length; i++){
       if (parseInt((document.querySelector('#vonTag') as HTMLInputElement).value) === i+1){
           (document.querySelector('#vonTag') as HTMLInputElement).max = this.tageimMonat[i].toString();
@@ -52,7 +54,7 @@ export class suchleiste {
     (document.querySelector('.ortaus') as HTMLElement).style.display = 'none';
   }
 
-  private vontagchange = () => {
+  private vontagchange = (event: Event) => {
     for (let i: number = 0; i < this.tageimMonat.length; i++){
       if(i === (parseInt((document.querySelector('#vonMonat') as HTMLInputElement).value)-1)){
           (document.querySelector('#vonTag')as HTMLInputElement).max = this.tageimMonat[i].toString();
@@ -67,7 +69,7 @@ export class suchleiste {
     this.checkin.value = (document.querySelector('#vonTag')as HTMLInputElement).value + "/" + (document.querySelector('#vonMonat')as HTMLInputElement).value + "/" + (document.querySelector('#vonJahr')as HTMLInputElement).value ;
   }
 
-  private vonmonatchange = () => {
+  private vonmonatchange = (event: Event) => {
     if((parseInt((document.querySelector('#vonMonat') as HTMLInputElement).value) + 1) && (parseInt((document.querySelector('#vonMonat') as HTMLInputElement).value) + 1) !== (parseInt((document.querySelector('#vonMonat') as HTMLInputElement).max)+1) ){
       (document.querySelector('#bisMonat') as HTMLInputElement).value = (parseInt((document.querySelector('#vonMonat') as HTMLInputElement).value) + 1).toString();
     } else {
@@ -77,47 +79,47 @@ export class suchleiste {
     this.checkin.value = (document.querySelector('#vonTag') as HTMLInputElement).value + "/" + (document.querySelector('#vonMonat') as HTMLInputElement).value + "/" + (document.querySelector('#vonJahr') as HTMLInputElement).value ;
   }
 
-private vonjahrchange = () => {
+private vonjahrchange = (event: Event) => {
       (document.querySelector('#bisJahr') as HTMLInputElement).value = (parseInt((document.querySelector('#vonJahr') as HTMLInputElement).value)+1).toString();
       this.checkin.value = (document.querySelector('#vonTag') as HTMLInputElement).value + "/" + (document.querySelector('#vonMonat') as HTMLInputElement).value + "/" + (document.querySelector('#vonJahr') as HTMLInputElement).value ;
 }
 
-private checkoutclick = () => {
+private checkoutclick = (event: Event) => {
     this.checkout.value = (document.querySelector('#bisTag') as HTMLInputElement).value + "/" + (document.querySelector('#bisMonat') as HTMLInputElement).value + "/" + (document.querySelector('#bisJahr') as HTMLInputElement).value ;
     (document.querySelector('.datum') as HTMLElement).style.display = 'flex';
     (document.querySelector('.gaesteaus') as HTMLElement).style.display = 'none';
     (document.querySelector('.ortaus') as HTMLElement).style.display = 'none';
 }
 
-private bistagechange = () => {
+private bistagechange = (event: Event) => {
   if(parseInt((document.querySelector('#bisTag') as HTMLInputElement).value) < parseInt((document.querySelector('#vonTag') as HTMLInputElement).value)){
     (document.querySelector('#bisJahr') as HTMLInputElement).value = (parseInt((document.querySelector('#vonJahr') as HTMLInputElement).value) +1).toString();
   }
   this.checkout.value = (document.querySelector('#bisTag') as HTMLInputElement).value + "/" + (document.querySelector('#bisMonat') as HTMLInputElement).value + "/" + (document.querySelector('#bisJahr') as HTMLInputElement).value ;
 }
 
-private bismonatechange = () => {
+private bismonatechange = (event: Event) => {
   if(parseInt((document.querySelector('#bisMonat') as HTMLInputElement).value) < parseInt((document.querySelector('#vonMonat') as HTMLInputElement).value)){
     (document.querySelector('#bisJahr') as HTMLInputElement).value = (parseInt((document.querySelector('#vonJahr') as HTMLInputElement).value) +1).toString();
   }
   this.checkout.value = (document.querySelector('#bisTag') as HTMLInputElement).value + "/" + (document.querySelector('#bisMonat') as HTMLInputElement).value + "/" + (document.querySelector('#bisJahr') as HTMLInputElement).value ;
 }
 
-private bisjahrechange = () => {
+private bisjahrechange = (event: Event) => {
   if(parseInt((document.querySelector('#bisJahr') as HTMLInputElement).value) > parseInt((document.querySelector('#vonJahr') as HTMLInputElement).value)) {
     (document.querySelector('#bisJahr') as HTMLInputElement).min = (parseInt((document.querySelector('#vonJahr') as HTMLInputElement).value)).toString();
   }
   this.checkout.value = (document.querySelector('#bisTag') as HTMLInputElement).value + "/" + (document.querySelector('#bisMonat') as HTMLInputElement).value + "/" + (document.querySelector('#bisJahr') as HTMLInputElement).value ;
 }
 
-private gaesteclick = () => {
+private gaesteclick = (event: Event) => {
     (this.gaeste as HTMLInputElement).value = (this.gaesteanzahl as HTMLInputElement).value + " Gäste";
     (document.querySelector('.datum') as HTMLElement).style.display = 'none';
     (document.querySelector('.gaesteaus') as HTMLElement).style.display = 'flex';
     (document.querySelector('.ortaus') as HTMLElement).style.display = 'none';
 }
 
-private gaesteanzahlchange = () => {
+private gaesteanzahlchange = (event: Event) => {
     if (parseInt((this.gaesteanzahl as HTMLInputElement).value) === 1){
         this.gaeste.value = ((this.gaesteanzahl as HTMLInputElement).value).toString() + " Gast";
     } else {
@@ -125,30 +127,30 @@ private gaesteanzahlchange = () => {
     }
 }
 
-private sucherundenter = () => {
+private sucherundenter = (event: Event) => {
     this.sucherund.style.display = 'none';
     this.sucheaus.style.display = 'flex';
 }
 
-private sucherundleave = () => {
+private sucherundleave = (event: Event) => {
     this.sucherund.style.display = 'flex';
     this.sucheaus.style.display = 'none';
 }
 
-private menuleisteclick = () => {
+private menuleisteclick = (event: Event) => {
     this.sucherund.style.display = 'none';
     this.sucheaus.style.display = 'flex';
 }
 
-private sucheausenter = () => {
+private sucheausenter = (event: Event) => {
     this.sucheaus.style.background = '#a1987f';
 }
 
-private sucheausleave = () => {
+private sucheausleave = (event: Event) => {
     this.sucheaus.style.background = '#d8cdb0';
 }
 
-private sucheausclick = () => {
+private sucheausclick = (event: Event) => {
     this.suche.style.display = 'none';
     this.ort.style.display = 'none';
     this.checkin.style.display = 'none';
