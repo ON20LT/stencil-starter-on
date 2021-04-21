@@ -93,38 +93,6 @@ width: 210px;
   transform-style: preserve-3d;
   text-align: center;
 }
-/*
-.checkout {
-width: 210px;
-  padding: 0.5rem 0.5rem;
-  min-height: 100vh;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
-  align-items: center;
-  min-height: auto;
-  border-radius: 30px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  background: #e7e9ee;
-  transform-style: preserve-3d;
-  text-align: center;
-  color: black;
-}
-
-.checkout p {
-  font-family: sans-serif;
-  font-size: 12px;
-  font-weight: bolder;
-  width: 50px;
-  min-height: 100vh;
-  display: inline-block;
-  perspective: 1000px;
-  min-height: auto;
-  background: #e7e9ee;
-  transform-style: preserve-3d;
-  text-align: center;
-}*/
 
 .gaeste {
   width: 180px;
@@ -215,3 +183,6 @@ background-color: #a39879;
   display: none;
 }
 
+.highlight input{
+  background-color: white;
+}

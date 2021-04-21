@@ -18,17 +18,22 @@ export namespace Components {
     }
     interface OnbnbSuche {
         "checkin": HTMLElement;
-        "checkout": HTMLElement;
-        "ee": HTMLElement;
         "gaeste": HTMLElement;
         "heute": Date;
         "menuleiste": HTMLElement;
-        "naechte": number;
         "ort": HTMLElement;
         "suche": HTMLElement;
         "tageimMonat": number [];
-        "valuebtv": HTMLElement;
+        "textc": string;
+        "textg": string;
+        "textn": string;
+        "texto": string;
+        "valueg": number;
+        "valuen": number;
+        "valueo": string;
+        "valuevj": number;
         "valuevm": number;
+        "valuevt": number;
     }
 }
 declare global {
@@ -76,17 +81,22 @@ declare namespace LocalJSX {
     }
     interface OnbnbSuche {
         "checkin"?: HTMLElement;
-        "checkout"?: HTMLElement;
-        "ee"?: HTMLElement;
         "gaeste"?: HTMLElement;
         "heute"?: Date;
         "menuleiste"?: HTMLElement;
-        "naechte"?: number;
         "ort"?: HTMLElement;
         "suche"?: HTMLElement;
         "tageimMonat"?: number [];
-        "valuebtv"?: HTMLElement;
+        "textc"?: string;
+        "textg"?: string;
+        "textn"?: string;
+        "texto"?: string;
+        "valueg"?: number;
+        "valuen"?: number;
+        "valueo"?: string;
+        "valuevj"?: number;
         "valuevm"?: number;
+        "valuevt"?: number;
     }
     interface IntrinsicElements {
         "ms-fotogalerie": MsFotogalerie;
