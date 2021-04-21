@@ -19,8 +19,9 @@
 }
 
 #overlay {
-    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.767),rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0)); 
+    background: linear-gradient(to right, black, rgb(0 0 0 / 0%));
     height: 300px; 
+    width: 90%;
     display: block;
     border-radius: 10px;
     position: absolute;

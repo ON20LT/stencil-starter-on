@@ -25,7 +25,7 @@ export class Newsletter {
   
   render() {
       return (
-        
+
              <div class="wrapper">
                 <img src="src/components/ls-newsletter/assets/beach-1761410_1920.jpg"></img>
                 <image id="overlay">
