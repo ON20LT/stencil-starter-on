@@ -23,9 +23,12 @@ export namespace Components {
         "gaeste": HTMLElement;
         "heute": Date;
         "menuleiste": HTMLElement;
+        "naechte": number;
         "ort": HTMLElement;
         "suche": HTMLElement;
-        "tageimMonat": number[];
+        "tageimMonat": number [];
+        "valuebtv": HTMLElement;
+        "valuevm": number;
     }
 }
 declare global {
@@ -78,9 +81,12 @@ declare namespace LocalJSX {
         "gaeste"?: HTMLElement;
         "heute"?: Date;
         "menuleiste"?: HTMLElement;
+        "naechte"?: number;
         "ort"?: HTMLElement;
         "suche"?: HTMLElement;
-        "tageimMonat"?: number[];
+        "tageimMonat"?: number [];
+        "valuebtv"?: HTMLElement;
+        "valuevm"?: number;
     }
     interface IntrinsicElements {
         "ms-fotogalerie": MsFotogalerie;

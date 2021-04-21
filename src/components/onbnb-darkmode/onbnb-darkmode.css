@@ -64,3 +64,16 @@
     background: #202020;
     color: #e7e9ee;
 }
+
+.dmhoverenter {
+  background: #202020;
+  color: #e7e9ee;
+  transition: 1s;
+}
+
+.dmhoverleave {
+  background: #e7e9ee;
+  color: black;
+  transition: 1s;
+}
+
