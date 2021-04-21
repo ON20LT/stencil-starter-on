@@ -1,8 +1,8 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'ls-footertest',
-  styleUrl: 'ls-footertest.css',
+  tag: 'ls-footer',
+  styleUrl: 'ls-footer.css',
   shadow: true,
 })
 export class LsFootertest {
