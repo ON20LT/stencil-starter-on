@@ -178,11 +178,3 @@ outline: none;
 border: none;
 background-color: #a39879;
 }
-
-#audio {
-  display: none;
-}
-
-.highlight input{
-  background-color: white;
-}

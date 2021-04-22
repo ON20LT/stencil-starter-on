@@ -1,8 +1,8 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'onbnb-darkmode',
-  styleUrl: 'onbnb-darkmode.css',
+  tag: 'cl-darkmode',
+  styleUrl: 'cl-darkmode.css',
   shadow: true
 })
 

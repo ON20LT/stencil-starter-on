@@ -1,8 +1,8 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'onbnb-suche',
-  styleUrl: 'onbnb-suche.css',
+  tag: 'cl-suche',
+  styleUrl: 'cl-suche.css',
   shadow: true,
   assetsDirs: ['asset']
 })
@@ -20,7 +20,7 @@ export class suchleiste {
 /*
 onInput={this.handleInputvT}
 onInput={this.handleInputvM}
- onInput={this.handleInputvJ}
+onInput={this.handleInputvJ}
 */
 
 

@@ -6,17 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MsFotogalerie {
-        "image": string;
-    }
-    interface MsSlideshow {
-        "slideshow_eins": string;
-    }
-    interface OnbnbDarkmode {
+    interface ClDarkmode {
         "dmode": HTMLElement;
         "dmpruefer": number;
     }
-    interface OnbnbSuche {
+    interface ClSuche {
         "checkin": HTMLElement;
         "gaeste": HTMLElement;
         "heute": Date;
@@ -35,8 +29,26 @@ export namespace Components {
         "valuevm": number;
         "valuevt": number;
     }
+    interface MsFotogalerie {
+        "image": string;
+    }
+    interface MsSlideshow {
+        "slideshow_eins": string;
+    }
 }
 declare global {
+    interface HTMLClDarkmodeElement extends Components.ClDarkmode, HTMLStencilElement {
+    }
+    var HTMLClDarkmodeElement: {
+        prototype: HTMLClDarkmodeElement;
+        new (): HTMLClDarkmodeElement;
+    };
+    interface HTMLClSucheElement extends Components.ClSuche, HTMLStencilElement {
+    }
+    var HTMLClSucheElement: {
+        prototype: HTMLClSucheElement;
+        new (): HTMLClSucheElement;
+    };
     interface HTMLMsFotogalerieElement extends Components.MsFotogalerie, HTMLStencilElement {
     }
     var HTMLMsFotogalerieElement: {
@@ -49,37 +61,19 @@ declare global {
         prototype: HTMLMsSlideshowElement;
         new (): HTMLMsSlideshowElement;
     };
-    interface HTMLOnbnbDarkmodeElement extends Components.OnbnbDarkmode, HTMLStencilElement {
-    }
-    var HTMLOnbnbDarkmodeElement: {
-        prototype: HTMLOnbnbDarkmodeElement;
-        new (): HTMLOnbnbDarkmodeElement;
-    };
-    interface HTMLOnbnbSucheElement extends Components.OnbnbSuche, HTMLStencilElement {
-    }
-    var HTMLOnbnbSucheElement: {
-        prototype: HTMLOnbnbSucheElement;
-        new (): HTMLOnbnbSucheElement;
-    };
     interface HTMLElementTagNameMap {
+        "cl-darkmode": HTMLClDarkmodeElement;
+        "cl-suche": HTMLClSucheElement;
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
-        "onbnb-darkmode": HTMLOnbnbDarkmodeElement;
-        "onbnb-suche": HTMLOnbnbSucheElement;
     }
 }
 declare namespace LocalJSX {
-    interface MsFotogalerie {
-        "image"?: string;
-    }
-    interface MsSlideshow {
-        "slideshow_eins"?: string;
-    }
-    interface OnbnbDarkmode {
+    interface ClDarkmode {
         "dmode"?: HTMLElement;
         "dmpruefer"?: number;
     }
-    interface OnbnbSuche {
+    interface ClSuche {
         "checkin"?: HTMLElement;
         "gaeste"?: HTMLElement;
         "heute"?: Date;
@@ -98,21 +92,27 @@ declare namespace LocalJSX {
         "valuevm"?: number;
         "valuevt"?: number;
     }
+    interface MsFotogalerie {
+        "image"?: string;
+    }
+    interface MsSlideshow {
+        "slideshow_eins"?: string;
+    }
     interface IntrinsicElements {
+        "cl-darkmode": ClDarkmode;
+        "cl-suche": ClSuche;
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
-        "onbnb-darkmode": OnbnbDarkmode;
-        "onbnb-suche": OnbnbSuche;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "cl-darkmode": LocalJSX.ClDarkmode & JSXBase.HTMLAttributes<HTMLClDarkmodeElement>;
+            "cl-suche": LocalJSX.ClSuche & JSXBase.HTMLAttributes<HTMLClSucheElement>;
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
-            "onbnb-darkmode": LocalJSX.OnbnbDarkmode & JSXBase.HTMLAttributes<HTMLOnbnbDarkmodeElement>;
-            "onbnb-suche": LocalJSX.OnbnbSuche & JSXBase.HTMLAttributes<HTMLOnbnbSucheElement>;
         }
     }
 }
