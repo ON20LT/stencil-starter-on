@@ -135,12 +135,20 @@ private goclick = () => {
   } else {
     if (this.valueo == null) {
       this.texto = "!";
+    } else if (this.valueo != null) {
+      this.texto = "";
     }if (this.valuevt == null || this.valuevm == null || this.valuevj == null) {
       this.textc = "!";
+    }else if (this.valuevt != null && this.valuevm != null && this.valuevj != null) {
+      this.textc = "";
     }if (this.valuen == null) {
       this.textn = "!";
+    }else if (this.valuen != null) {
+      this.textn = "";
     }if (this.valueg == null) {
       this.textg = "!";
+    }else if (this.valueg != null) {
+      this.textg = "";
     }
   }
 }
