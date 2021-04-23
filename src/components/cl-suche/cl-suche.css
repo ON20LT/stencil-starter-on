@@ -1,14 +1,16 @@
+.suchleiste {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .menuleiste {
   width: auto;
-  margin-top: -2%;
-  margin-left: 24%;
-  margin-right: 24%;
   min-height: 100vh;
   display: inline-block;
   align-items: center;
   justify-content: center;
-  perspective: 1000px;
-  align-items: center;
   min-height: auto;
   border-radius: 30px;
   background: none;
@@ -95,7 +97,7 @@ width: 210px;
 }
 
 .gaeste {
-  width: 180px;
+  width: 120px;
   padding: 0.5rem 0.5rem;
   min-height: 100vh;
   display: inline-block;
@@ -114,7 +116,7 @@ width: 210px;
 
 
 .gaeste input {
-  width: 160px;
+  width: 100px;
   padding: 0.5rem 0.5rem;
   min-height: 100vh;
   display: block;
@@ -127,7 +129,7 @@ width: 210px;
 }
 
 .naechte {
-  width: 180px;
+  width: 120px;
   padding: 0.5rem 0.5rem;
   min-height: 100vh;
   display: inline-block;
@@ -145,7 +147,7 @@ width: 210px;
 }
 
   .naechte input {
-    width: 160px;
+    width: 100px;
   padding: 0.5rem 0.5rem;
   min-height: 100vh;
   display: block;
@@ -162,8 +164,8 @@ background: #d8cdb0;
 box-sizing: border-box;
 border-radius: 50%;
 border: none;
-min-width: 65px;
-min-height: 65px;
+width: 65px;
+height: 65px;
 justify-content: center;
 align-items: center;
 display: inline-block;

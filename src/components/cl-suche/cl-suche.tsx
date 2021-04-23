@@ -152,26 +152,28 @@ private goclick = () => {
   render() {
     return (
       <Host>
-        <div class="menuleiste">
-          <div class="ort" onMouseEnter={this.ortIn}  onMouseLeave={this.ortOut}>
-              Ort: {this.texto}
-              <input type="String" id="ort" name="Ort" value={this.valueo} onChange={this.ortCl} onClick={this.ortCl}/>
-          </div>
+        <div class="suchleiste">
+          <div class="menuleiste">
+            <div class="ort" onMouseEnter={this.ortIn}  onMouseLeave={this.ortOut}>
+                Ort: {this.texto}
+                <input type="String" id="ort" name="Ort" value={this.valueo} onChange={this.ortCl} onClick={this.ortCl}/>
+            </div>
 
-          <div class="checkin" onMouseEnter={this.checkinIn} onMouseLeave={this.checkinOut}>
-              Check-In: {this.textc}
-              <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt} onClick={this.checkintCl} onChange={this.checkintCl}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm} onClick={this.checkinmCl} onChange={this.checkinmCl}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj} onClick={this.checkinjCl} onChange={this.checkinjCl}/></div>
-          </div>
-          <div class="naechte" onMouseEnter={this.naechteIn} onMouseLeave={this.naechteOut}>
-              Nächte: {this.textn}
-              <div class="eingabe"> <input type='number' id="vonTag" min={1} max={100} value={this.valuen} onChange={this.naechteCl} onClick={this.naechteCl}/> </div>
-          </div>
+            <div class="checkin" onMouseEnter={this.checkinIn} onMouseLeave={this.checkinOut}>
+                Check-In: {this.textc}
+                <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt} onClick={this.checkintCl} onChange={this.checkintCl}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm} onClick={this.checkinmCl} onChange={this.checkinmCl}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj} onClick={this.checkinjCl} onChange={this.checkinjCl}/></div>
+            </div>
+            <div class="naechte" onMouseEnter={this.naechteIn} onMouseLeave={this.naechteOut}>
+                Nächte: {this.textn}
+                <div class="eingabe"> <input type='number' id="vonTag" min={1} max={100} value={this.valuen} onChange={this.naechteCl} onClick={this.naechteCl}/> </div>
+            </div>
 
-          <div class="gaeste" onMouseEnter={this.gaesteIn} onMouseLeave={this.gaesteOut}>
-              Gäste: {this.textg}
-              <input type='number' id='gaesteanzahl' name='Gästeanzahl' min={1} max={15} value={this.valueg} onChange={this.gaesteCl} onClick={this.gaesteCl}/>
+            <div class="gaeste" onMouseEnter={this.gaesteIn} onMouseLeave={this.gaesteOut}>
+                Gäste: {this.textg}
+                <input type='number' id='gaesteanzahl' name='Gästeanzahl' min={1} max={15} value={this.valueg} onChange={this.gaesteCl} onClick={this.gaesteCl}/>
+            </div>
+                <button class="suche" onClick={this.goclick}>GO</button>
           </div>
-              <button class="suche" onClick={this.goclick}>GO</button>
         </div>
       </Host>
     )
