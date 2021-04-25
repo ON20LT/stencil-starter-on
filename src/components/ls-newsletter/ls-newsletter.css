@@ -39,15 +39,10 @@ img {
 
 #content{
     margin-left: 80px;
-    align-items: flex-start;
-    justify-content: center;
-    width: 544px !important;
+    width: 60%;
 
 }
-span {
-    display: flex;
-    position: relative;
-}
+
 form {
     position: relative;
 }
@@ -57,7 +52,7 @@ label {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .email-input {
@@ -67,7 +62,8 @@ h2 {
     padding: 5px;
     margin: 10px 0;
     border-radius: 10px;
-    width: 50%;
+    max-width: max-content;
+    min-width: 50%;
 }
 
 button {
