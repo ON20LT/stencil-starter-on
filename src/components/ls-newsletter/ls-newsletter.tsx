@@ -1,4 +1,4 @@
-import {Component,h, State} from '@stencil/core';
+import {Component,h, State, Element} from '@stencil/core';
 
 @Component({
     tag: 'ls-newsletter',
@@ -9,18 +9,12 @@ import {Component,h, State} from '@stencil/core';
 export class Newsletter {
 
 
-  @State() email: string;
+  @Element() newsletterForm: HTMLElement;
+  @State() emailInput: HTMLInputElement;
 
-  byClick (event){
-    event.preventDefault()
-    console.log(this.email);
-    console.log("hallo");
-  }  
-
-  forChange(e){
-    this.email = e.target.email;
-    console.log(this.email);
-  }
+  
+  
+ 
 
   
   render() {
@@ -33,12 +27,14 @@ export class Newsletter {
                     <span>
                         <h2>Zum Newsletter anmelden</h2>
                     </span>
-                    <form onClick={(event) => this.byClick(event)}>
-                        <label class="email-label">E-mail Adresse <br/>
-                          <input class="email-input" type="text" placeholder="example@onbnb.de"/>
-                        </label>
+                    <form id="newsletterForm">
+                      <div>
+                      <label class="email-label" htmlfor="email-input">E-mail Adresse</label>
+                          <input class="email-input" id="email-input" type="text" placeholder="example@onbnb.de"/>
+                      </div>
+                        <button id="submit-button">Jetzt anmelden</button>
                     </form>
-                    <button id="submit-button">Jetzt anmelden</button>
+                    
                     </div>
                 </image> 
               </div>
