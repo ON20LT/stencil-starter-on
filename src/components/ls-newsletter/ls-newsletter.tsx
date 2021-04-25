@@ -1,4 +1,4 @@
-import {Component,h, State, Element} from '@stencil/core';
+import {Component,h,Prop, Event} from '@stencil/core';
 
 @Component({
     tag: 'ls-newsletter',
@@ -8,15 +8,24 @@ import {Component,h, State, Element} from '@stencil/core';
 
 export class Newsletter {
 
+    @Event()emailInput: HTMLInputElement;
 
-  @Element() newsletterForm: HTMLElement;
-  @State() emailInput: HTMLInputElement;
+        handleEmailInput = (event: Event) => {
+        event.preventDefault();
+        console.log(this.emailInput.value);
+    }
 
-  
-  
- 
+    @Prop() submit: boolean;
 
-  
+    private handlesubmit = () => {
+        if (this.submit = true){
+            alert("Danke, dass Sie uns einen Zugang zu Ihren persönlichen Daten geschaffen haben")
+        }
+    }
+
+
+
+        
   render() {
       return (
 
@@ -27,18 +36,18 @@ export class Newsletter {
                     <span>
                         <h2>Zum Newsletter anmelden</h2>
                     </span>
-                    <form id="newsletterForm">
+                    <form id="newsletterForm" onSubmit={this.handleEmailInput}>
                       <div>
-                      <label class="email-label" htmlfor="email-input">E-mail Adresse</label>
-                          <input class="email-input" id="email-input" type="text" placeholder="example@onbnb.de"/>
+                      <label class="email-label">E-mail Adresse
+                      <input id="email-input" type="text" ref={(emailInput) => this.emailInput = emailInput as HTMLInputElement} placeholder="example@onbnb.de"/>
+                      </label>
                       </div>
-                        <button id="submit-button">Jetzt anmelden</button>
+                        <button type="submit" value="submit" id="submit-button">Jetzt anmelden</button>
                     </form>
-                    
                     </div>
                 </image> 
               </div>
             
         )
-}
+    }
 }
