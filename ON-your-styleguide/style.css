@@ -26,11 +26,11 @@ body {
 .dmhoverenter {
   background: #202020;
   color: #e7e9ee;
-  transition: 2s;
+  transition: 1.5s;
 }
 
 .dmhoverleave {
   background: #e7e9ee;
   color: black;
-  transition: 2s;
+  transition: 1.5s;
 }

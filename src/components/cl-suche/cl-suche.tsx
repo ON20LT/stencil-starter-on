@@ -1,8 +1,8 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'onbnb-suche',
-  styleUrl: 'onbnb-suche.css',
+  tag: 'cl-suche',
+  styleUrl: 'cl-suche.css',
   shadow: true,
   assetsDirs: ['asset']
 })
@@ -20,7 +20,7 @@ export class suchleiste {
 /*
 onInput={this.handleInputvT}
 onInput={this.handleInputvM}
- onInput={this.handleInputvJ}
+onInput={this.handleInputvJ}
 */
 
 
@@ -135,12 +135,20 @@ private goclick = () => {
   } else {
     if (this.valueo == null) {
       this.texto = "!";
+    } else if (this.valueo != null) {
+      this.texto = "";
     }if (this.valuevt == null || this.valuevm == null || this.valuevj == null) {
       this.textc = "!";
+    }else if (this.valuevt != null && this.valuevm != null && this.valuevj != null) {
+      this.textc = "";
     }if (this.valuen == null) {
       this.textn = "!";
+    }else if (this.valuen != null) {
+      this.textn = "";
     }if (this.valueg == null) {
       this.textg = "!";
+    }else if (this.valueg != null) {
+      this.textg = "";
     }
   }
 }
@@ -152,26 +160,28 @@ private goclick = () => {
   render() {
     return (
       <Host>
-        <div class="menuleiste">
-          <div class="ort" onMouseEnter={this.ortIn}  onMouseLeave={this.ortOut}>
-              Ort: {this.texto}
-              <input type="String" id="ort" name="Ort" value={this.valueo} onChange={this.ortCl} onClick={this.ortCl}/>
-          </div>
+        <div class="suchleiste">
+          <div class="menuleiste">
+            <div class="ort" onMouseEnter={this.ortIn}  onMouseLeave={this.ortOut}>
+                Ort: {this.texto}
+                <input type="String" id="ort" name="Ort" value={this.valueo} onChange={this.ortCl} onClick={this.ortCl}/>
+            </div>
 
-          <div class="checkin" onMouseEnter={this.checkinIn} onMouseLeave={this.checkinOut}>
-              Check-In: {this.textc}
-              <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt} onClick={this.checkintCl} onChange={this.checkintCl}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm} onClick={this.checkinmCl} onChange={this.checkinmCl}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj} onClick={this.checkinjCl} onChange={this.checkinjCl}/></div>
-          </div>
-          <div class="naechte" onMouseEnter={this.naechteIn} onMouseLeave={this.naechteOut}>
-              Nächte: {this.textn}
-              <div class="eingabe"> <input type='number' id="vonTag" min={1} max={100} value={this.valuen} onChange={this.naechteCl} onClick={this.naechteCl}/> </div>
-          </div>
+            <div class="checkin" onMouseEnter={this.checkinIn} onMouseLeave={this.checkinOut}>
+                Check-In: {this.textc}
+                <div class="eingabe"><input type='number' id="vonTag" min={1} max={31} value={this.valuevt} onClick={this.checkintCl} onChange={this.checkintCl}/>/<input type='number' id="vonMonat" min={1} max={12} value={this.valuevm} onClick={this.checkinmCl} onChange={this.checkinmCl}/>/<input type='number' id="vonJahr" min={2021} max={2030} value={this.valuevj} onClick={this.checkinjCl} onChange={this.checkinjCl}/></div>
+            </div>
+            <div class="naechte" onMouseEnter={this.naechteIn} onMouseLeave={this.naechteOut}>
+                Nächte: {this.textn}
+                <div class="eingabe"> <input type='number' id="vonTag" min={1} max={100} value={this.valuen} onChange={this.naechteCl} onClick={this.naechteCl}/> </div>
+            </div>
 
-          <div class="gaeste" onMouseEnter={this.gaesteIn} onMouseLeave={this.gaesteOut}>
-              Gäste: {this.textg}
-              <input type='number' id='gaesteanzahl' name='Gästeanzahl' min={1} max={15} value={this.valueg} onChange={this.gaesteCl} onClick={this.gaesteCl}/>
+            <div class="gaeste" onMouseEnter={this.gaesteIn} onMouseLeave={this.gaesteOut}>
+                Gäste: {this.textg}
+                <input type='number' id='gaesteanzahl' name='Gästeanzahl' min={1} max={15} value={this.valueg} onChange={this.gaesteCl} onClick={this.gaesteCl}/>
+            </div>
+                <button class="suche" onClick={this.goclick}>GO</button>
           </div>
-              <button class="suche" onClick={this.goclick}>GO</button>
         </div>
       </Host>
     )
