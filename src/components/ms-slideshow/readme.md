@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property         | Attribute        | Description | Type     | Default                |
-| ---------------- | ---------------- | ----------- | -------- | ---------------------- |
-| `slideshow_eins` | `slideshow_eins` |             | `string` | `"slideshow_eins.jpg"` |
+| Property         | Attribute        | Description | Type     | Default       |
+| ---------------- | ---------------- | ----------- | -------- | ------------- |
+| `slideshow_eins` | `slideshow_eins` |             | `string` | `"hotel.jpg"` |
 
 
 ----------------------------------------------
