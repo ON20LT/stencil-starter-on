@@ -1,7 +1,8 @@
 :host {
-  display: block;
+  box-sizing: border-box;
 }
 footer {
-  padding: 50px;
-  background-color: teal
+  background-color: teal;
+  bottom: 0px;
+
 }

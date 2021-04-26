@@ -1,4 +1,4 @@
-* {
+:host{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #E7E9EE;
@@ -6,20 +6,16 @@
 }
 
 .wrapper {
-    display: inline;
+    position: relative;
     background-color: brown;
     align-items: center;
     border-radius: 10px;
     justify-content: center;
-}
-
-.wrapper::before{
-    display: flex;
-    content: '';
+    margin: 50px;
 }
 
 #overlay {
-    background: linear-gradient(to right, black, rgb(0 0 0 / 0%));
+    background: linear-gradient(to right,#1C2135 , rgb(0 0 0 / 0%));
     height: 300px; 
     width: 90%;
     display: block;
@@ -34,17 +30,13 @@ img {
     object-position: center;
     float: right;
     border-radius: 10px;
-    z-index: 3;
 }
 
 #content{
     margin-left: 80px;
     width: 60%;
+    position: absolute;
 
-}
-
-form {
-    position: relative;
 }
 
 label {
@@ -55,9 +47,9 @@ h2 {
     font-size: 30px;
 }
 
-.email-input {
+#email-input {
     background-color: #E7E9EE;
-    color:  #5A6794;
+    color:  #1C2135;
     border-style: none;
     padding: 5px;
     margin: 10px 0;
