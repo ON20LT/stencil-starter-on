@@ -1,46 +1,60 @@
+:host{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+}
 
 .wrapper {
     position: relative;
-    background-color: brown;
     align-items: center;
     border-radius: 10px;
     justify-content: center;
     margin: 50px;
+    padding: 50px;
     border: none;
+    background-color: #5A6794;
 }
 
-#overlay {
-    background: linear-gradient(to right,#1C2135 , rgb(0 0 0 / 0%));
+.wrapper ::after {
+    background-color: red;
+}
+
+/*#overlay {
+    background: linear-gradient(90deg, #5A6794 51%, #ffffff00 71%);
     height: 300px; 
-    width: 90%;
+    width: 100%;
     display: block;
     border-radius: 10px;
     position: absolute;
     justify-content: center;
 }
-img {
+.img {
     height: 300px;
     width: 100% !important;
     object-fit: cover;
     object-position: center;
     float: right;
     border-radius: 10px;
-}
-
-#content{
-    margin-left: 80px;
-    width: 60%;
-    position: absolute;
-
-}
-
-label {
-    cursor: pointer;
-}
+}*/
 
 h2 {
     font-size: 30px;
+}
+#content{
+    margin-left: 80px;
+}
+.label-descr {
+    margin: 1em 0 1em 0;
+	position: relative;
+}
+.label-descr label {
+    position: absolute;
+	background: #1C2135;
+	padding: 0 .5em;
+	font-size: .8em;
+	top: -.6em;
+	left: .5em;
+	transition: all .3s ease;
 }
 
 #email-input {
@@ -50,17 +64,39 @@ h2 {
     padding: 5px;
     margin: 10px 0;
     border-radius: 10px;
-    max-width: max-content;
-    min-width: 50%;
+    max-width: 70%;
+    min-width: 300px;
+}
+
+::placeholder {
+    color: currentColor;
+    opacity: 0.3;
+    text-align: left;
+}
+
+.label-descr label.like-placeholder {
+	color: #666;
+	font-size: 1em;
+	top: .5em;
+	left: .5em;
+}
+
+.label-descr input {
+	padding: .5em;
 }
 
 button {
     color:  #E7E9EE;
-    background-color: #5A6794;
+    background-color: #1C2135;
     border-radius: 30px;
     border: none;
     margin-top: 20px;
     padding:  6px 10px;
     position: relative;
     cursor: pointer;
+}
+
+button:hover{
+    background-color: #D8CDB0;
+    color: #1C2135;
 }
