@@ -7,10 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MsFotogalerie {
-        "image": string;
+        "imgSrc": string;
     }
     interface MsSlideshow {
-        "slideshow_eins": string;
+        "imgSrc": string;
     }
 }
 declare global {
@@ -33,10 +33,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MsFotogalerie {
-        "image"?: string;
+        "imgSrc"?: string;
     }
     interface MsSlideshow {
-        "slideshow_eins"?: string;
+        "imgSrc"?: string;
     }
     interface IntrinsicElements {
         "ms-fotogalerie": MsFotogalerie;
