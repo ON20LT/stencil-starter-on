@@ -6,11 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-
-    interface LsFooter {
-    }
-    interface LsNewsletter {
-
     interface ClDarkmode {
         "dmode": HTMLElement;
         "dmpruefer": number;
@@ -33,7 +28,10 @@ export namespace Components {
         "valuevj": number;
         "valuevm": number;
         "valuevt": number;
-
+    }
+    interface LsFooter {
+    }
+    interface LsNewsletter {
     }
     interface MsFotogalerie {
         "imgSrc": string;
@@ -43,19 +41,6 @@ export namespace Components {
     }
 }
 declare global {
-
-    interface HTMLLsFooterElement extends Components.LsFooter, HTMLStencilElement {
-    }
-    var HTMLLsFooterElement: {
-        prototype: HTMLLsFooterElement;
-        new (): HTMLLsFooterElement;
-    };
-    interface HTMLLsNewsletterElement extends Components.LsNewsletter, HTMLStencilElement {
-    }
-    var HTMLLsNewsletterElement: {
-        prototype: HTMLLsNewsletterElement;
-        new (): HTMLLsNewsletterElement;
-
     interface HTMLClDarkmodeElement extends Components.ClDarkmode, HTMLStencilElement {
     }
     var HTMLClDarkmodeElement: {
@@ -67,7 +52,18 @@ declare global {
     var HTMLClSucheElement: {
         prototype: HTMLClSucheElement;
         new (): HTMLClSucheElement;
-
+    };
+    interface HTMLLsFooterElement extends Components.LsFooter, HTMLStencilElement {
+    }
+    var HTMLLsFooterElement: {
+        prototype: HTMLLsFooterElement;
+        new (): HTMLLsFooterElement;
+    };
+    interface HTMLLsNewsletterElement extends Components.LsNewsletter, HTMLStencilElement {
+    }
+    var HTMLLsNewsletterElement: {
+        prototype: HTMLLsNewsletterElement;
+        new (): HTMLLsNewsletterElement;
     };
     interface HTMLMsFotogalerieElement extends Components.MsFotogalerie, HTMLStencilElement {
     }
@@ -82,24 +78,15 @@ declare global {
         new (): HTMLMsSlideshowElement;
     };
     interface HTMLElementTagNameMap {
-
-        "ls-footer": HTMLLsFooterElement;
-        "ls-newsletter": HTMLLsNewsletterElement;
-
         "cl-darkmode": HTMLClDarkmodeElement;
         "cl-suche": HTMLClSucheElement;
-
+        "ls-footer": HTMLLsFooterElement;
+        "ls-newsletter": HTMLLsNewsletterElement;
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
     }
 }
 declare namespace LocalJSX {
-
-    interface LsFooter {
-    }
-    interface LsNewsletter {
-        "onEmailInput"?: (event: CustomEvent<any>) => void;
-
     interface ClDarkmode {
         "dmode"?: HTMLElement;
         "dmpruefer"?: number;
@@ -122,7 +109,11 @@ declare namespace LocalJSX {
         "valuevj"?: number;
         "valuevm"?: number;
         "valuevt"?: number;
-
+    }
+    interface LsFooter {
+    }
+    interface LsNewsletter {
+        "onEmailInput"?: (event: CustomEvent<any>) => void;
     }
     interface MsFotogalerie {
         "imgSrc"?: string;
@@ -131,13 +122,10 @@ declare namespace LocalJSX {
         "imgSrc"?: string;
     }
     interface IntrinsicElements {
-
-        "ls-footer": LsFooter;
-        "ls-newsletter": LsNewsletter;
-
         "cl-darkmode": ClDarkmode;
         "cl-suche": ClSuche;
-
+        "ls-footer": LsFooter;
+        "ls-newsletter": LsNewsletter;
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
     }
@@ -146,13 +134,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-
-            "ls-footer": LocalJSX.LsFooter & JSXBase.HTMLAttributes<HTMLLsFooterElement>;
-            "ls-newsletter": LocalJSX.LsNewsletter & JSXBase.HTMLAttributes<HTMLLsNewsletterElement>;
-
             "cl-darkmode": LocalJSX.ClDarkmode & JSXBase.HTMLAttributes<HTMLClDarkmodeElement>;
             "cl-suche": LocalJSX.ClSuche & JSXBase.HTMLAttributes<HTMLClSucheElement>;
-
+            "ls-footer": LocalJSX.LsFooter & JSXBase.HTMLAttributes<HTMLLsFooterElement>;
+            "ls-newsletter": LocalJSX.LsNewsletter & JSXBase.HTMLAttributes<HTMLLsNewsletterElement>;
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
         }

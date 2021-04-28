@@ -1,9 +1,4 @@
-:host{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #E7E9EE;
-    box-sizing: border-box;
-}
+
 
 .wrapper {
     position: relative;
@@ -12,6 +7,7 @@
     border-radius: 10px;
     justify-content: center;
     margin: 50px;
+    border: none;
 }
 
 #overlay {
