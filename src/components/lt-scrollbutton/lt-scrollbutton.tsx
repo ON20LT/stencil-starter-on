@@ -1,4 +1,4 @@
-import { Component, Element, Prop, h, State, Listen } from '@stencil/core';
+import { Component, Element, Prop, h, State } from '@stencil/core';
 
 @Component({
   tag: 'lt-scrollbutton',
