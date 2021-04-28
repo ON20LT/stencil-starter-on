@@ -82,7 +82,7 @@ export class Newsletter {
                                 <input id="email-input" type="text" ref={(emailInput) => this.emailInput = emailInput as HTMLInputElement} placeholder="example@onbnb.de"/>
                             
                         </div>
-                        <button type="submit" value="submit" id="submit-button" >Jetzt anmelden</button>
+                        <button type="submit" value="submit" id="submit-button">Jetzt anmelden</button>
                     </form>
                 </div>
             </div>

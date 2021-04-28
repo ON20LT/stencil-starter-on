@@ -21,7 +21,6 @@ export class LsFootertest {
             <a href="#">Datenschutz</a>
           </nav>
         </footer>
-        <slot></slot>
       </Host>
     );
   }

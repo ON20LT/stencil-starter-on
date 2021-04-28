@@ -15,9 +15,7 @@
     background-color: #5A6794;
 }
 
-.wrapper ::after {
-    background-color: red;
-}
+
 
 /*#overlay {
     background: linear-gradient(90deg, #5A6794 51%, #ffffff00 71%);
@@ -44,17 +42,21 @@ h2 {
     margin-left: 80px;
 }
 .label-descr {
-    margin: 1em 0 1em 0;
+    margin-top: 20px;
 	position: relative;
 }
 .label-descr label {
     position: absolute;
-	background: #1C2135;
 	padding: 0 .5em;
-	font-size: .8em;
+	font-size: 12px;
 	top: -.6em;
 	left: .5em;
 	transition: all .3s ease;
+}
+
+.label-descr label:hover {
+    cursor: pointer;
+    font-size: 14px;
 }
 
 #email-input {
