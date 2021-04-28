@@ -1,0 +1,66 @@
+
+
+.wrapper {
+    position: relative;
+    background-color: brown;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 50px;
+    border: none;
+}
+
+#overlay {
+    background: linear-gradient(to right,#1C2135 , rgb(0 0 0 / 0%));
+    height: 300px; 
+    width: 90%;
+    display: block;
+    border-radius: 10px;
+    position: absolute;
+    justify-content: center;
+}
+img {
+    height: 300px;
+    width: 100% !important;
+    object-fit: cover;
+    object-position: center;
+    float: right;
+    border-radius: 10px;
+}
+
+#content{
+    margin-left: 80px;
+    width: 60%;
+    position: absolute;
+
+}
+
+label {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+#email-input {
+    background-color: #E7E9EE;
+    color:  #1C2135;
+    border-style: none;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+    max-width: max-content;
+    min-width: 50%;
+}
+
+button {
+    color:  #E7E9EE;
+    background-color: #5A6794;
+    border-radius: 30px;
+    border: none;
+    margin-top: 20px;
+    padding:  6px 10px;
+    position: relative;
+    cursor: pointer;
+}

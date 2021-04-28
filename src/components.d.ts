@@ -29,8 +29,14 @@ export namespace Components {
         "valuevm": number;
         "valuevt": number;
     }
+<<<<<<< HEAD
     interface LtScrollbutton {
         "title": string;
+=======
+    interface LsFooter {
+    }
+    interface LsNewsletter {
+>>>>>>> 0e5cfb691ad054416414eee68636e67b324e4e1e
     }
     interface MsFotogalerie {
         "imgSrc": string;
@@ -52,11 +58,25 @@ declare global {
         prototype: HTMLClSucheElement;
         new (): HTMLClSucheElement;
     };
+<<<<<<< HEAD
     interface HTMLLtScrollbuttonElement extends Components.LtScrollbutton, HTMLStencilElement {
     }
     var HTMLLtScrollbuttonElement: {
         prototype: HTMLLtScrollbuttonElement;
         new (): HTMLLtScrollbuttonElement;
+=======
+    interface HTMLLsFooterElement extends Components.LsFooter, HTMLStencilElement {
+    }
+    var HTMLLsFooterElement: {
+        prototype: HTMLLsFooterElement;
+        new (): HTMLLsFooterElement;
+    };
+    interface HTMLLsNewsletterElement extends Components.LsNewsletter, HTMLStencilElement {
+    }
+    var HTMLLsNewsletterElement: {
+        prototype: HTMLLsNewsletterElement;
+        new (): HTMLLsNewsletterElement;
+>>>>>>> 0e5cfb691ad054416414eee68636e67b324e4e1e
     };
     interface HTMLMsFotogalerieElement extends Components.MsFotogalerie, HTMLStencilElement {
     }
@@ -73,7 +93,12 @@ declare global {
     interface HTMLElementTagNameMap {
         "cl-darkmode": HTMLClDarkmodeElement;
         "cl-suche": HTMLClSucheElement;
+<<<<<<< HEAD
         "lt-scrollbutton": HTMLLtScrollbuttonElement;
+=======
+        "ls-footer": HTMLLsFooterElement;
+        "ls-newsletter": HTMLLsNewsletterElement;
+>>>>>>> 0e5cfb691ad054416414eee68636e67b324e4e1e
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
     }
@@ -102,8 +127,15 @@ declare namespace LocalJSX {
         "valuevm"?: number;
         "valuevt"?: number;
     }
+<<<<<<< HEAD
     interface LtScrollbutton {
         "title"?: string;
+=======
+    interface LsFooter {
+    }
+    interface LsNewsletter {
+        "onEmailInput"?: (event: CustomEvent<any>) => void;
+>>>>>>> 0e5cfb691ad054416414eee68636e67b324e4e1e
     }
     interface MsFotogalerie {
         "imgSrc"?: string;
@@ -114,7 +146,12 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "cl-darkmode": ClDarkmode;
         "cl-suche": ClSuche;
+<<<<<<< HEAD
         "lt-scrollbutton": LtScrollbutton;
+=======
+        "ls-footer": LsFooter;
+        "ls-newsletter": LsNewsletter;
+>>>>>>> 0e5cfb691ad054416414eee68636e67b324e4e1e
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
     }
@@ -125,7 +162,12 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "cl-darkmode": LocalJSX.ClDarkmode & JSXBase.HTMLAttributes<HTMLClDarkmodeElement>;
             "cl-suche": LocalJSX.ClSuche & JSXBase.HTMLAttributes<HTMLClSucheElement>;
+<<<<<<< HEAD
             "lt-scrollbutton": LocalJSX.LtScrollbutton & JSXBase.HTMLAttributes<HTMLLtScrollbuttonElement>;
+=======
+            "ls-footer": LocalJSX.LsFooter & JSXBase.HTMLAttributes<HTMLLsFooterElement>;
+            "ls-newsletter": LocalJSX.LsNewsletter & JSXBase.HTMLAttributes<HTMLLsNewsletterElement>;
+>>>>>>> 0e5cfb691ad054416414eee68636e67b324e4e1e
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
         }
