@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property         | Attribute        | Description | Type     | Default       |
-| ---------------- | ---------------- | ----------- | -------- | ------------- |
-| `slideshow_eins` | `slideshow_eins` |             | `string` | `"hotel.jpg"` |
+
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `imgSrc` | `img-src` |             | `string` | `undefined` |
 
 
 ----------------------------------------------

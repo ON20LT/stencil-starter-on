@@ -7,15 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/dist/stencil-starter-on/stencil-starter-on.esm.js" type="module"></script>
     <link rel="stylesheet" href="/dist/stencil-starter-on/stencil-starter-on.css" />
+    <link rel="stylesheet" href="./style.css"/>
     <title>your design guide</title>
     <script type="text/javascript" src="/ON-your-styleguide/script.js" defer></script>
 </head>
 
 <body>
 
+    <ms-slideshow>
+        <!--Slideshow-->
+        <!--Slideshow Überschrift-->
+        <div slot="slideshow-überschrift">Herzlich Willkommen bei ONBNB</div>
+        <!--Slide eins-->
+            <div slot="slideshow_eins">
+                <img class="slideshowbild" width="100%" src="/src/assets/slideshow_eins.jpg" alt="">
+            </div>
+
+        <!--Slide zwei-->
+            <div slot="slideshow_zwei">
+                <img class="slideshowbild" width="100%" src="/src/assets/slideshow_zwei.jpg" alt="">
+            </div>
+
+        <!--Slide drei-->
+            <div slot="slideshow_drei">
+                <img class="slideshowbild" width="100%" src="/src/assets/slideshow_drei.jpg" alt="">
+            </div>
+
+    </ms-slideshow> 
+    <div class="borderline">
+      <img src="./Logo/Logo.png" alt="logo" id="logo"/>
+    </div>
+    <cl-darkmode></cl-darkmode>
+    <cl-suche></cl-suche>
+    <ms-fotogalerie>
+        <!--Fotogalerie Überschrift-->
+     <div slot="fotogalerie-überschrift">Die besten Hotels im Überblick</div>
+
+
+     <!--Fotogalerie obere Reihe-->
+     <div slot="hotel_eins">
+        <img class="bild" width="100%" src="/src/assets/hotel.jpg" alt="Haus mit Pool und Aussicht auf Berge">
+    </div>
+
+    <div slot="hotel_zwei">
+        <img class="bild" width="100%" src="/src/assets/hotel_zwei.jpg" alt="Haus mit Pool und Palmen bei Dämmerung">
+    </div>
+
+    <div slot="hotel_drei">
+        <img class="bild" width="100%" src="/src/assets/hotel_drei.jpg" alt="Blaues Haus mit einer Garage bei Sonnenuntergang">
+    </div>
+
+    <!--Fotogalerie untere Reihe-->
+    <div slot="hotel_vier">
+        <img class="bild" width="100%" src="/src/assets/hotel_vier.jpg" alt="Haus mit Pool">
+    </div>
+
+    <div slot="hotel_fünf">
+        <img class="bild" width="100%" src="/src/assets/hotel_fünf.jpg" alt="Bunte Häuser am Wasser">
+    </div>
+
+    <div slot="hotel_sechs">
+        <img class="bild" width="100%" src="/src/assets/hotel_sechs.jpg" alt="Häuser am Wasser">
+    </div>
+    </ms-fotogalerie>
     <ls-newsletter></ls-newsletter>
     <ls-footer></ls-footer>
-
 
 </body>
 

@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default       |
-| -------- | --------- | ----------- | -------- | ------------- |
-| `image`  | `image`   |             | `string` | `"hotel.jpg"` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `imgSrc` | `img-src` |             | `string` | `undefined` |
 
 
 ----------------------------------------------
