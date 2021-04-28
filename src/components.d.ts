@@ -30,10 +30,10 @@ export namespace Components {
         "valuevt": number;
     }
     interface MsFotogalerie {
-        "image": string;
+        "imgSrc": string;
     }
     interface MsSlideshow {
-        "slideshow_eins": string;
+        "imgSrc": string;
     }
 }
 declare global {
@@ -93,10 +93,10 @@ declare namespace LocalJSX {
         "valuevt"?: number;
     }
     interface MsFotogalerie {
-        "image"?: string;
+        "imgSrc"?: string;
     }
     interface MsSlideshow {
-        "slideshow_eins"?: string;
+        "imgSrc"?: string;
     }
     interface IntrinsicElements {
         "cl-darkmode": ClDarkmode;
