@@ -24,7 +24,6 @@ export class darkMode {
   private dmHoverEnter = () => {
     let elementdm = document.body;
     if(this.dmpruefer === 1) {
-      console.log("e1");
       elementdm.classList.toggle("dmhoverenter");
     }
   }
@@ -32,7 +31,6 @@ export class darkMode {
   private dmHoverLeave = () => {
     let elementdm = document.body;
     if(this.dmpruefer === 1) {
-      console.log("he");
       elementdm.classList.toggle("dmhoverleave");
     }
   }
