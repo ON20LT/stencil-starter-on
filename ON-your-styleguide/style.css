@@ -34,3 +34,6 @@ body {
   color: black;
   transition: 1.5s;
 }
+img {
+  border-radius: 15px;
+}

@@ -1,32 +1,32 @@
-import { Component, Host, Element, Prop, h } from '@stencil/core';
+import { Component, Element, Prop, h, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'lt-scrollbutton',
   styleUrl: 'lt-scrollbutton.css',
-  shadow: true
+  shadow: true,
 })
-
 export class LTscrollbutton {
+  @Element() scrollEl: HTMLElement;
 
-    @Element() scrollEl : HTMLElement;
+  @Prop() title: string;
 
-    @Prop() title: string;
+  @State() toggle: boolean = false;
 
-    button = '';
-    showButton = false;
+  handleClick() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 
-    showButtonHandler () {
-        this.showButton = true;
-    }
-
-
-
-    render () {
-
-        return (
-           <Host>
-            <button type='button' class='button' onClick={this.showButtonHandler.bind(this)}>{this.title}</button>
-           </Host>
-       )
-    }
+  render() {
+    return (
+      <div>
+        <button type="button" class="button" onClick={() => this.handleClick()}>
+          Top
+        </button>
+      </div>
+    );
+  }
 }

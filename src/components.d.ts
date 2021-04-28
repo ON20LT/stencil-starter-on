@@ -29,6 +29,9 @@ export namespace Components {
         "valuevm": number;
         "valuevt": number;
     }
+    interface LtScrollbutton {
+        "title": string;
+    }
     interface MsFotogalerie {
         "imgSrc": string;
     }
@@ -49,6 +52,12 @@ declare global {
         prototype: HTMLClSucheElement;
         new (): HTMLClSucheElement;
     };
+    interface HTMLLtScrollbuttonElement extends Components.LtScrollbutton, HTMLStencilElement {
+    }
+    var HTMLLtScrollbuttonElement: {
+        prototype: HTMLLtScrollbuttonElement;
+        new (): HTMLLtScrollbuttonElement;
+    };
     interface HTMLMsFotogalerieElement extends Components.MsFotogalerie, HTMLStencilElement {
     }
     var HTMLMsFotogalerieElement: {
@@ -64,6 +73,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "cl-darkmode": HTMLClDarkmodeElement;
         "cl-suche": HTMLClSucheElement;
+        "lt-scrollbutton": HTMLLtScrollbuttonElement;
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
     }
@@ -92,6 +102,9 @@ declare namespace LocalJSX {
         "valuevm"?: number;
         "valuevt"?: number;
     }
+    interface LtScrollbutton {
+        "title"?: string;
+    }
     interface MsFotogalerie {
         "imgSrc"?: string;
     }
@@ -101,6 +114,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "cl-darkmode": ClDarkmode;
         "cl-suche": ClSuche;
+        "lt-scrollbutton": LtScrollbutton;
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
     }
@@ -111,6 +125,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "cl-darkmode": LocalJSX.ClDarkmode & JSXBase.HTMLAttributes<HTMLClDarkmodeElement>;
             "cl-suche": LocalJSX.ClSuche & JSXBase.HTMLAttributes<HTMLClSucheElement>;
+            "lt-scrollbutton": LocalJSX.LtScrollbutton & JSXBase.HTMLAttributes<HTMLLtScrollbuttonElement>;
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
         }
