@@ -74,6 +74,7 @@ export class Newsletter {
     console.log(this.emailInput.value);
     alert("Vielen Dank, Du hast dich erfolreich zu unseren Newsletter angemeldet! :)")
     window.onload;
+    this.emailInput.value="";
     
     //document.getElementById("newsletter-Form");
     //alert("Oops, das hat wohl nicht geklappt! :(")
