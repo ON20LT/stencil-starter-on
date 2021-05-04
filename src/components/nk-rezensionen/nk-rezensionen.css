@@ -1,8 +1,5 @@
-:host {
-  display: block;
-}
 .wrapper {
-  width:80%;
+  width: 80%;
   margin: 3cm;
   padding: 0;
   box-sizing: border-box;
@@ -20,10 +17,9 @@
  
 }*/
 
-
-.rezensionen-headline{
+.rezensionen-headline {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #5A6794;
+  background-color: #5a6794;
   color: white;
   position: absolute;
   width: 50%;
@@ -41,18 +37,18 @@
 
 .rezensionen:nth-child(3) {
   animation-delay: 20s;
-
 }
 
 .rezensionen {
+  margin-top: 175px;
   width: 100%;
   /*background-color: #5A6794;*/
   border: 30px;
   text-align: center;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
   font-size: xx-large;
-  color:  #5A6794;
+  color: #5a6794;
   /*position: absolute;*/
 
   opacity: 0;
@@ -60,12 +56,10 @@
 }
 
 @keyframes cycleQuotes {
-  25%{
+  25% {
     opacity: 1;
-
   }
-  40%{
+  40% {
     opacity: 0;
-
   }
 }

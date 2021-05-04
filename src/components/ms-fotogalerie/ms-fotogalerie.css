@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  
 }
 .fotogalerie {
   max-width: 32%;
@@ -11,20 +10,21 @@
   padding: 25px;
   box-sizing: border-box;
   border-radius: 30px;
-  background-color: #5A6794;
+  background-color: #5a6794;
   margin: 15px;
 }
 
-.fotogalerie-headline{
+.fotogalerie-headline {
   font-family: Arial, Helvetica, sans-serif;
-  color: #5A6794;
+  color: #5a6794;
   font-size: 28pt;
   margin: 15px;
   text-align: center;
+  margin-top: 625px;
 }
 
-.fotogalerie:hover{
-  background-color: #1C2135;
+.fotogalerie:hover {
+  background-color: #1c2135;
   transform: scale(1.05);
   transition: all 0.2s ease;
 }
