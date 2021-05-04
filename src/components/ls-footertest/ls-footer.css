@@ -5,12 +5,11 @@
     box-sizing: border-box;
 }
 footer {
-  background-color:#5A6794;
+  background-color:#1C2135;
   bottom: 0px;
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100px;
-
 }
 
 svg{
@@ -19,13 +18,31 @@ padding: 5px;
 height: 50px;
 }
 
+svg:hover {
+cursor: pointer;
+
+}
+
 nav {
   float: right;
+  position: relative;
+  font-size: 14px;
 }
 
 a {
-  margin: 5px;
-  padding: 5px;
   color: white;
-  text-decoration: none;
+
+}
+
+.link {
+  float: left;
+  margin: 0;
+  padding: 5px;
+  right: 10px;
+  
+
+}
+
+a:hover{
+  color: #5A6794;
 }

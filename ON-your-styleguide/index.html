@@ -70,9 +70,53 @@
         </div>
       </ms-fotogalerie>
 
+      <nk-flipcard>
+        <slot slot="card-front">
+          <img class="pic" width="100%"  src="/src/components/nk-flipcard/assets/beach.jpg" alt="Mutter und Kind am Strand"></slot>
+        <slot slot="card-back">Lust auf Meer? Finde Deinen Sommertraum bein ONBB!</slot>
+
+        <slot slot="card-front2">
+          <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/mountains.jpg" alt="Frau in den Bergen"></slot>
+        <slot slot="card-back2">Wanderlust? Der Berg ruft! </slot>
+
+        <slot slot="card-front3">
+          <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/skiing.jpg" alt="Skipiste mit Lift und Skifahrer"></slot>
+        <slot slot="card-back3">Adrenalinkick gefällig? Buche Dir jetzt Dein Abenteuer im Schnee!</slot>
+    </nk-flipcard>
+
+    <nk-rezensionen>
+      <!-- <div slot="rezensionen-überschrift">Was andere über uns sagen:</div>-->
+      <slot slot="rezension_eins">"Die beste Seite, auf der ich jemals war!"</slot>
+      <slot slot="rezension_zwei">"Mega toll, besser geht es nicht!"</slot>
+      <slot slot="rezension_drei">"Mein Urlaub war ein Traum! Es hat alles super funktioniert!"</slot>
+      </nk-rezensionen>
+  
+
       <lt-scrollbutton text="To Top"></lt-scrollbutton>
     </body>
-
-    <ls-newsletter></ls-newsletter>
+    <!--Newsletteranmeldung-->
+    <ls-newsletter newsletter-title="Melde dich jetzt zu unserem Newsletter an"> Und hole dir viele schöne Inspirationen für deinen Urlaub!
+      <div slot="newsletter-img>">
+        <img class="img" width="100%" height="100%" src="/src/assets/beach-1761410_1920.jpg" alt="strand-mit-palmen"/>
+      </div>
+    </ls-newsletter>
+   
+    <nk-button text="Feedback" ></nk-button>
+    <nk-easteregg header="Hi Josef" >Wir hoffen dir gefällt unsere Website :)</nk-easteregg>
+    <ls-footer>
+      <div slot="footer-links">
+        <a href='#'>Impressum</a>
+        <a href='#'>Datenschutz</a>
+      </div>
+    </ls-footer>
   </body>
+  <script>
+    var btn = document.querySelector('nk-button');
+    var easteregg = document.querySelector('nk-easteregg');
+    
+    btn.addEventListener('click', function () {
+      easteregg.isopen = true
+    });
+    
+    </script> 
 </html>
