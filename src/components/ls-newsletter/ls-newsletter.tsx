@@ -72,7 +72,7 @@ export class Newsletter {
     event.preventDefault();
     document.addEventListener("submit", this.validateRegistration);
     console.log(this.emailInput.value);
-    alert("Vielen Dank, Du hast dich erfolreich für unseren Newsletter angemeldet! :)")
+    alert("Vielen Dank, Du hast dich erfolreich zu unseren Newsletter angemeldet! :)")
     window.onload;
     
     //document.getElementById("newsletter-Form");
