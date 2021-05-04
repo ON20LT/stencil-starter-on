@@ -14,9 +14,6 @@
     border: none;
     background-color: #5A6794;
 }
-
-
-
 /*#overlay {
     background: linear-gradient(90deg, #5A6794 51%, #ffffff00 71%);
     height: 300px; 
@@ -47,10 +44,10 @@ h2 {
 }
 .label-descr label {
     position: absolute;
+    font-size: 12px;
 	padding: 0 .5em;
-	font-size: 12px;
 	top: -.6em;
-	left: .5em;
+	/*left: .5em;*/
 	transition: all .3s ease;
 }
 
@@ -58,6 +55,24 @@ h2 {
     cursor: pointer;
     font-size: 14px;
 }
+
+::placeholder {
+    color: currentColor;
+    opacity: 0.3;
+    text-align: left;
+}
+
+.label-descr label.email-placeholder {
+	color: #666;
+	font-size: 10px;
+	top: .5em;
+	left: .5em;
+}
+
+.label-descr input {
+	padding: 2px;
+}
+
 
 #email-input {
     background-color: #E7E9EE;
@@ -70,22 +85,6 @@ h2 {
     min-width: 300px;
 }
 
-::placeholder {
-    color: currentColor;
-    opacity: 0.3;
-    text-align: left;
-}
-
-.label-descr label.like-placeholder {
-	color: #666;
-	font-size: 1em;
-	top: .5em;
-	left: .5em;
-}
-
-.label-descr input {
-	padding: .5em;
-}
 
 button {
     color:  #E7E9EE;

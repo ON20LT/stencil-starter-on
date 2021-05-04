@@ -32,6 +32,7 @@ export namespace Components {
     interface LsFooter {
     }
     interface LsNewsletter {
+        "form": HTMLElement;
         "img": string;
         "newsletterTitle": string;
     }
@@ -125,9 +126,12 @@ declare namespace LocalJSX {
     interface LsFooter {
     }
     interface LsNewsletter {
+        "form"?: HTMLElement;
         "img"?: string;
         "newsletterTitle"?: string;
         "onEmailInput"?: (event: CustomEvent<any>) => void;
+        "onFormObject"?: (event: CustomEvent<any>) => void;
+        "onValidation"?: (event: CustomEvent<any>) => void;
     }
     interface LtScrollbutton {
         "title"?: string;
