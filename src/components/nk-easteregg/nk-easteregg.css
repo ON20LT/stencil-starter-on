@@ -13,8 +13,7 @@
 
 }
 
-/*modal-wrapper*/
-.modal-wrapper {
+.wrapper {
 position: fixed;
 top: 0;
 bottom: 0;
@@ -26,14 +25,14 @@ transition: visibility 0s linear 0.25s, opacity 0.25 0s, transform 0.25;
 z-index: 10;
 }
 
-.modal-overlay {
+.background {
 background: var(--black);
 height: 100%;
 width: 100%;
 position: absolute;
 }
 
-.modal-wrapper .modal {
+.wrapper .modal {
 background: var(--white);
 width: 600px;
 height: auto;
@@ -44,9 +43,9 @@ border-radius: 4px;
 transition: visibility 0s linear 0s, opacity .25s 0s, transform 0.25;
 }
 
-/* Modal Header*/
+/* Header*/
 
-.modal-wrapper .modal .header {
+.wrapper .modal .header {
 padding: 16px;
 display: flex;
 align-items: center;
@@ -54,14 +53,14 @@ justify-content: space-between;
 border-bottom: 1px solid var(--line);
 }
 
-.modal-wrapper .modal .header h6 {
+.wrapper .modal .header h6 {
 margin: 0;
 line-height: 1;
 font-family: sans-serif;
 font-size: 16px;
 }
 
-.modal-wrapper .modal .header .close {
+.wrapper .modal .header .close {
 height: 24px;
 width: 24px;
 display: flex;
@@ -72,13 +71,13 @@ cursor: pointer;
 transition: 0.1s ease-in-out;
 }
 
-.modal-wrapper .modal .header .close:hover {
+.wrapper .modal .header .close:hover {
 background: var(--lightgrey);
 }
 
-/* Modal Body*/
+/* Body*/
 
-.modal-wrapper .modal .body {
+.wrapper .modal .body {
 padding: 16px;
 font-family: sans-serif;
 font-size: 14px;
@@ -89,9 +88,9 @@ overflow-y: auto;
 color: var(--darkgrey);
 }
 
-/* Modal Footer*/
+/* Footer*/
 
-.modal-wrapper .modal .footer {
+.wrapper .modal .footer {
 padding: 16px;
 display: flex;
 justify-content: flex-end;
@@ -99,7 +98,7 @@ align-items: center;
 border-top: 1px solid var(--line);
 }
 
-.no .yes {
+/*.no .yes {
 background: var(--buttons);
 color: var(--white);
 border-radius: 4px;
@@ -112,14 +111,11 @@ font-weight: 500;
 display: flex;
 align-items: center;
 justify-content: center;
-}
+}*/
 
 .btn:hover {
 background: var(--effect);
 }
-
-
-/*active styles*/
 
 .is-open {
 opacity: 1;
@@ -132,7 +128,7 @@ transform: translate(-50%, 90px);
 }
 
 @media (max-width: 600px) {
-.modal-wrapper .modal {
+.wrapper .modal {
   width: 100%;
   bottom: 0;
   transform: translate(-50%, 100%);

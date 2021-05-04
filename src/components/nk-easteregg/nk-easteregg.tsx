@@ -7,7 +7,7 @@ import { Component, h, getAssetPath, Prop, State } from '@stencil/core';
   assetsDirs: ['assets'],
 })
 export class NkEasteregg {
-  // Props
+  
   @Prop({
     mutable: true,
     reflect: true,
@@ -18,8 +18,6 @@ export class NkEasteregg {
   @Prop() closeIcon= 'icon_x.svg';
   
  
-
-   //Functions
    private handleCancel = () => {
     this.isopen = false;
   };
@@ -33,8 +31,8 @@ export class NkEasteregg {
 
   render() {
     return (
-      <div class={this.isopen ? 'modal-wrapper is-open' : 'modal-wrapper'}>
-        <div class="modal-overlay" onClick={this.handleCancel}/>
+      <div class={this.isopen ? 'wrapper is-open' : 'wrapper'}>
+        <div class="background" onClick={this.handleCancel}/>
         <div class="modal">
           <div class="header">
             <h6>{this.header}</h6>
