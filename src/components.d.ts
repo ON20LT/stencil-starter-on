@@ -170,8 +170,8 @@ declare namespace LocalJSX {
     interface LsNewsletter {
         "img"?: string;
         "newsletterTitle"?: string;
+        "onEmailInfo"?: (event: CustomEvent<any>) => void;
         "onEmailInput"?: (event: CustomEvent<any>) => void;
-        "onFormObject"?: (event: CustomEvent<any>) => void;
     }
     interface LtScrollbutton {
         "title"?: string;
