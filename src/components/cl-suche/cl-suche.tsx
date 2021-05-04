@@ -130,9 +130,6 @@ private gaesteCl = () => {
 @Prop() textg: string = "";
 
 private goclick = () => {
-  if(this.valueo != null && this.valuevt != null && this.valuevm != null && this.valuevj != null && this.valueg != null && this.valuen != null){
-    alert('Augen schließen und genießen... Danke und beehren Sie uns bald wieder, wir würden uns freuen. - Ihr ONbnb-Team.');
-  } else {
     if (this.valueo == null) {
       this.texto = "!";
     } else if (this.valueo != null) {
@@ -149,11 +146,10 @@ private goclick = () => {
       this.textg = "!";
     }else if (this.valueg != null) {
       this.textg = "";
+    }  if(this.valueo != null && this.valuevt != null && this.valuevm != null && this.valuevj != null && this.valueg != null && this.valuen != null){
+      alert('Augen schließen und genießen... Danke und beehren Sie uns bald wieder, wir würden uns freuen. - Ihr ONbnb-Team.');
     }
-  }
 }
-
-
 
 
 
