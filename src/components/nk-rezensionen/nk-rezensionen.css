@@ -2,6 +2,7 @@
   display: block;
 }
 .wrapper {
+  width:80%;
   margin: 3cm;
   padding: 0;
   box-sizing: border-box;
