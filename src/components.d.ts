@@ -44,6 +44,9 @@ export namespace Components {
     interface MsSlideshow {
         "imgSrc": string;
     }
+    interface NkFlipcard {
+        "imgSrc": string;
+    }
 }
 declare global {
     interface HTMLClDarkmodeElement extends Components.ClDarkmode, HTMLStencilElement {
@@ -88,6 +91,12 @@ declare global {
         prototype: HTMLMsSlideshowElement;
         new (): HTMLMsSlideshowElement;
     };
+    interface HTMLNkFlipcardElement extends Components.NkFlipcard, HTMLStencilElement {
+    }
+    var HTMLNkFlipcardElement: {
+        prototype: HTMLNkFlipcardElement;
+        new (): HTMLNkFlipcardElement;
+    };
     interface HTMLElementTagNameMap {
         "cl-darkmode": HTMLClDarkmodeElement;
         "cl-suche": HTMLClSucheElement;
@@ -96,6 +105,7 @@ declare global {
         "lt-scrollbutton": HTMLLtScrollbuttonElement;
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
+        "nk-flipcard": HTMLNkFlipcardElement;
     }
 }
 declare namespace LocalJSX {
@@ -139,6 +149,9 @@ declare namespace LocalJSX {
     interface MsSlideshow {
         "imgSrc"?: string;
     }
+    interface NkFlipcard {
+        "imgSrc"?: string;
+    }
     interface IntrinsicElements {
         "cl-darkmode": ClDarkmode;
         "cl-suche": ClSuche;
@@ -147,6 +160,7 @@ declare namespace LocalJSX {
         "lt-scrollbutton": LtScrollbutton;
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
+        "nk-flipcard": NkFlipcard;
     }
 }
 export { LocalJSX as JSX };
@@ -160,6 +174,7 @@ declare module "@stencil/core" {
             "lt-scrollbutton": LocalJSX.LtScrollbutton & JSXBase.HTMLAttributes<HTMLLtScrollbuttonElement>;
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
+            "nk-flipcard": LocalJSX.NkFlipcard & JSXBase.HTMLAttributes<HTMLNkFlipcardElement>;
         }
     }
 }

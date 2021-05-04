@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `img`    | `img`     |             | `string` | `undefined` |
+| Property          | Attribute          | Description | Type     | Default     |
+| ----------------- | ------------------ | ----------- | -------- | ----------- |
+| `img`             | `img`              |             | `string` | `undefined` |
+| `newsletterTitle` | `newsletter-title` |             | `string` | `undefined` |
 
 
 ## Events
@@ -17,6 +18,7 @@
 | Event        | Description | Type               |
 | ------------ | ----------- | ------------------ |
 | `emailInput` |             | `CustomEvent<any>` |
+| `formObject` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------
