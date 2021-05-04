@@ -7,81 +7,77 @@
     <script src="/dist/stencil-starter-on/stencil-starter-on.esm.js" type="module"></script>
     <link rel="stylesheet" href="/dist/stencil-starter-on/stencil-starter-on.css" />
     <link rel="stylesheet" href="./style.css" />
-    <title>your design guide</title>
+    <title>Willkommen bei ONBNB</title>
     <script type="text/javascript" src="/ON-your-styleguide/script.js" defer></script>
   </head>
-  </body>
+  <body>
     <div class="borderline">
       <img src="./Logo/Logo.png" alt="logo" id="logo" />
     </div>
     <cl-suche></cl-suche>
-    <body>
-      <ms-slideshow>
-        <!--Slideshow-->
-        <!--Slide eins-->
-        <div slot="slideshow_eins">
-          <img id="slideshowEins" width="100%" src="/src/assets/slideshow_eins.jpg" alt="" />
-        </div>
-  
-        <!--Slide zwei-->
-        <div slot="slideshow_zwei">
-          <img id="slideshowZwei" width="100%" src="/src/assets/slideshow_zwei.jpg" alt="" />
-        </div>
-  
-        <!--Slide drei-->
-        <div slot="slideshow_drei">
-          <img id="slideshowDrei" width="100%" src="/src/assets/slideshow_drei.jpg" alt="" />
-        </div>
-  
-        <!--Slideshow Überschrift-->
-        <div slot="slideshow-überschrift">Herzlich Willkommen bei ONBNB</div>
-      </ms-slideshow>
+    <ms-slideshow>
+      <!--Slideshow-->
+      <!--Slide eins-->
+      <div slot="slideshow_eins">
+        <img id="slideshowEins" width="100%" src="/src/assets/slideshow_eins.jpg" alt="Beleuchtetes Haus mit dunklem Himmel" />
+      </div>
 
-      <cl-darkmode></cl-darkmode>
+      <!--Slide zwei-->
+      <div slot="slideshow_zwei">
+        <img id="slideshowZwei" width="100%" src="/src/assets/slideshow_zwei.jpg" alt="Häuser umgeben von Bäumen und Bergen" />
+      </div>
 
-      <ms-fotogalerie>
-        <!--Fotogalerie Überschrift-->
-        <div slot="fotogalerie-überschrift">Die besten Hotels im Überblick</div>
+      <!--Slide drei-->
+      <div slot="slideshow_drei">
+        <img id="slideshowDrei" width="100%" src="/src/assets/slideshow_drei.jpg" alt="Beleuchtete Häuser am Wasser mit Spiegelung" />
+      </div>
 
-        <!--Fotogalerie obere Reihe-->
-        <div slot="hotel_eins">
-          <img class="bild" width="100%" src="/src/assets/hotel.jpg" alt="Haus mit Pool und Aussicht auf Berge" />
-        </div>
+      <!--Slideshow Überschrift-->
+      <div slot="slideshow-überschrift">Herzlich Willkommen bei ONBNB</div>
+    </ms-slideshow>
 
-        <div slot="hotel_zwei">
-          <img class="bild" width="100%" src="/src/assets/hotel_zwei.jpg" alt="Haus mit Pool und Palmen bei Dämmerung" />
-        </div>
+    <cl-darkmode></cl-darkmode>
 
-        <div slot="hotel_drei">
-          <img class="bild" width="100%" src="/src/assets/hotel_drei.jpg" alt="Blaues Haus mit einer Garage bei Sonnenuntergang" />
-        </div>
+    <ms-fotogalerie>
+      <!--Fotogalerie Überschrift-->
+      <div slot="fotogalerie-überschrift">Die besten Hotels im Überblick</div>
 
-        <!--Fotogalerie untere Reihe-->
-        <div slot="hotel_vier">
-          <img class="bild" width="100%" src="/src/assets/hotel_vier.jpg" alt="Haus mit Pool" />
-        </div>
+      <!--Fotogalerie obere Reihe-->
+      <div slot="hotel_eins">
+        <img class="bild" width="100%" src="/src/assets/hotel.jpg" alt="Haus mit Pool und Aussicht auf Berge" />
+      </div>
 
-        <div slot="hotel_fünf">
-          <img class="bild" width="100%" src="/src/assets/hotel_fünf.jpg" alt="Bunte Häuser am Wasser" />
-        </div>
+      <div slot="hotel_zwei">
+        <img class="bild" width="100%" src="/src/assets/hotel_zwei.jpg" alt="Haus mit Pool und Palmen bei Dämmerung" />
+      </div>
 
-        <div slot="hotel_sechs">
-          <img class="bild" width="100%" src="/src/assets/hotel_sechs.jpg" alt="Häuser am Wasser" />
-        </div>
-      </ms-fotogalerie>
+      <div slot="hotel_drei">
+        <img class="bild" width="100%" src="/src/assets/hotel_drei.jpg" alt="Blaues Haus mit einer Garage bei Sonnenuntergang" />
+      </div>
 
-      <nk-flipcard>
-        <slot slot="card-front">
-          <img class="pic" width="100%"  src="/src/components/nk-flipcard/assets/beach.jpg" alt="Mutter und Kind am Strand"></slot>
-        <slot slot="card-back">Lust auf Meer? Finde Deinen Sommertraum bein ONBB!</slot>
+      <!--Fotogalerie untere Reihe-->
+      <div slot="hotel_vier">
+        <img class="bild" width="100%" src="/src/assets/hotel_vier.jpg" alt="Haus mit Pool" />
+      </div>
 
-        <slot slot="card-front2">
-          <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/mountains.jpg" alt="Frau in den Bergen"></slot>
-        <slot slot="card-back2">Wanderlust? Der Berg ruft! </slot>
+      <div slot="hotel_fünf">
+        <img class="bild" width="100%" src="/src/assets/hotel_fünf.jpg" alt="Bunte Häuser am Wasser" />
+      </div>
 
-        <slot slot="card-front3">
-          <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/skiing.jpg" alt="Skipiste mit Lift und Skifahrer"></slot>
-        <slot slot="card-back3">Adrenalinkick gefällig? Buche Dir jetzt Dein Abenteuer im Schnee!</slot>
+      <div slot="hotel_sechs">
+        <img class="bild" width="100%" src="/src/assets/hotel_sechs.jpg" alt="Häuser am Wasser" />
+      </div>
+    </ms-fotogalerie>
+
+    <nk-flipcard>
+      <slot slot="card-front"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/beach.jpg" alt="Mutter und Kind am Strand" /></slot>
+      <slot slot="card-back">Lust auf Meer? Finde Deinen Sommertraum bein ONBB!</slot>
+
+      <slot slot="card-front2"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/mountains.jpg" alt="Frau in den Bergen" /></slot>
+      <slot slot="card-back2">Wanderlust? Der Berg ruft! </slot>
+
+      <slot slot="card-front3"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/skiing.jpg" alt="Skipiste mit Lift und Skifahrer" /></slot>
+      <slot slot="card-back3">Adrenalinkick gefällig? Buche Dir jetzt Dein Abenteuer im Schnee!</slot>
     </nk-flipcard>
 
     <nk-rezensionen>
@@ -89,34 +85,32 @@
       <slot slot="rezension_eins">"Die beste Seite, auf der ich jemals war!"</slot>
       <slot slot="rezension_zwei">"Mega toll, besser geht es nicht!"</slot>
       <slot slot="rezension_drei">"Mein Urlaub war ein Traum! Es hat alles super funktioniert!"</slot>
-      </nk-rezensionen>
-  
+    </nk-rezensionen>
 
-      <lt-scrollbutton text="To Top"></lt-scrollbutton>
-    </body>
+    <lt-scrollbutton text="To Top"></lt-scrollbutton>
     <!--Newsletteranmeldung-->
-    <ls-newsletter newsletter-title="Melde dich jetzt zu unserem Newsletter an"> Und hole dir viele schöne Inspirationen für deinen Urlaub!
+    <ls-newsletter newsletter-title="Melde dich jetzt zu unserem Newsletter an">
+      Und hole dir viele schöne Inspirationen für deinen Urlaub!
       <div slot="newsletter-img>">
-        <img class="img" width="100%" height="100%" src="/src/assets/beach-1761410_1920.jpg" alt="strand-mit-palmen"/>
+        <img class="img" width="100%" height="100%" src="/src/assets/beach-1761410_1920.jpg" alt="strand-mit-palmen" />
       </div>
     </ls-newsletter>
-   
-    <nk-button text="Feedback" ></nk-button>
-    <nk-easteregg header="Hi Josef" >Wir hoffen dir gefällt unsere Website :)</nk-easteregg>
+
+    <nk-button text="Feedback"></nk-button>
+    <nk-easteregg header="Hi Josef">Wir hoffen dir gefällt unsere Website :)</nk-easteregg>
     <ls-footer>
       <div slot="footer-links">
-        <a href='#'>Impressum</a>
-        <a href='#'>Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
       </div>
     </ls-footer>
   </body>
   <script>
     var btn = document.querySelector('nk-button');
     var easteregg = document.querySelector('nk-easteregg');
-    
+
     btn.addEventListener('click', function () {
-      easteregg.isopen = true
+      easteregg.isopen = true;
     });
-    
-    </script> 
+  </script>
 </html>

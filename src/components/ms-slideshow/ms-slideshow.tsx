@@ -9,25 +9,25 @@ export class MsSlideshow {
   @Prop({ reflect: true, mutable: true }) imgSrc: string;
 
   bildEinsLaden() {
-    const slideEins = document.getElementById('slideshowEins');
-    const slideZwei = document.getElementById('slideshowZwei');
-    const slideDrei = document.getElementById('slideshowDrei');
+    const slideEins = document.getElementById('slideshowEins') as HTMLElement;
+    const slideZwei = document.getElementById('slideshowZwei') as HTMLElement;
+    const slideDrei = document.getElementById('slideshowDrei') as HTMLElement;
     slideEins.style.visibility = 'visible';
     slideZwei.style.visibility = 'hidden';
     slideDrei.style.visibility = 'hidden';
   }
   bildZweiLaden() {
-    const slideEins = document.getElementById('slideshowEins');
-    const slideZwei = document.getElementById('slideshowZwei');
-    const slideDrei = document.getElementById('slideshowDrei');
+    const slideEins = document.getElementById('slideshowEins') as HTMLElement;
+    const slideZwei = document.getElementById('slideshowZwei') as HTMLElement;
+    const slideDrei = document.getElementById('slideshowDrei') as HTMLElement;
     slideEins.style.visibility = 'hidden';
     slideZwei.style.visibility = 'visible';
     slideDrei.style.visibility = 'hidden';
   }
   bildDreiLaden() {
-    const slideEins = document.getElementById('slideshowEins');
-    const slideZwei = document.getElementById('slideshowZwei');
-    const slideDrei = document.getElementById('slideshowDrei');
+    const slideEins = document.getElementById('slideshowEins') as HTMLElement;
+    const slideZwei = document.getElementById('slideshowZwei') as HTMLElement;
+    const slideDrei = document.getElementById('slideshowDrei') as HTMLElement;
     slideEins.style.visibility = 'hidden';
     slideZwei.style.visibility = 'hidden';
     slideDrei.style.visibility = 'visible';
