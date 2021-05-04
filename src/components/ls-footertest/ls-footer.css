@@ -26,14 +26,21 @@ cursor: pointer;
 nav {
   float: right;
   position: relative;
-  margin: 0 40px 20px 0;
+  font-size: 14px;
 }
 
 a {
-  margin: 5px;
-  padding: 5px;
   color: white;
-  text-decoration: none;
+
+}
+
+.link {
+  float: left;
+  margin: 0;
+  padding: 5px;
+  right: 10px;
+  
+
 }
 
 a:hover{
