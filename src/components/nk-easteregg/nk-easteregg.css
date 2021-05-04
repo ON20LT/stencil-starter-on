@@ -1,0 +1,143 @@
+:host {
+  display: block;
+
+/* Farbschema ONBB */
+--buttons: #5A6794;
+--effect: #1C2135;
+--accent: #DBCDB0;
+--black: #13152c;
+--darkgrey: #313436;
+--lightgrey: #ececec;
+--line: #f1f2f3;
+--white: #ffffff;
+
+}
+
+/*modal-wrapper*/
+.modal-wrapper {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+opacity: 0;
+visibility: hidden;
+transition: visibility 0s linear 0.25s, opacity 0.25 0s, transform 0.25;
+z-index: 10;
+}
+
+.modal-overlay {
+background: var(--black);
+height: 100%;
+width: 100%;
+position: absolute;
+}
+
+.modal-wrapper .modal {
+background: var(--white);
+width: 600px;
+height: auto;
+position: absolute;
+left: 50%;
+transform: translate(-50%, 0px);
+border-radius: 4px;
+transition: visibility 0s linear 0s, opacity .25s 0s, transform 0.25;
+}
+
+/* Modal Header*/
+
+.modal-wrapper .modal .header {
+padding: 16px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid var(--line);
+}
+
+.modal-wrapper .modal .header h6 {
+margin: 0;
+line-height: 1;
+font-family: sans-serif;
+font-size: 16px;
+}
+
+.modal-wrapper .modal .header .close {
+height: 24px;
+width: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 4px;
+cursor: pointer;
+transition: 0.1s ease-in-out;
+}
+
+.modal-wrapper .modal .header .close:hover {
+background: var(--lightgrey);
+}
+
+/* Modal Body*/
+
+.modal-wrapper .modal .body {
+padding: 16px;
+font-family: sans-serif;
+font-size: 14px;
+line-height: 21px;
+max-height: 320px;
+height: auto;
+overflow-y: auto;
+color: var(--darkgrey);
+}
+
+/* Modal Footer*/
+
+.modal-wrapper .modal .footer {
+padding: 16px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+border-top: 1px solid var(--line);
+}
+
+.no .yes {
+background: var(--buttons);
+color: var(--white);
+border-radius: 4px;
+padding: 0 12px;
+height: 38px;
+transition: 0.1s ease-in-out;
+cursor: pointer;
+font-family: sans-serif;
+font-weight: 500;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.btn:hover {
+background: var(--effect);
+}
+
+
+/*active styles*/
+
+.is-open {
+opacity: 1;
+visibility: visible;
+transition: visibility 0s linear 0s, opacity 0.25 0s, transform 0.25;
+}
+
+.is-open .modal {
+transform: translate(-50%, 90px);
+}
+
+@media (max-width: 600px) {
+.modal-wrapper .modal {
+  width: 100%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  opacity: 1;
+}
+
+
+}

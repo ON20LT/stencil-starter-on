@@ -1,0 +1,19 @@
+button {
+  position: fixed;
+  bottom: 70px;
+  right: 13px;
+  background-color: #d8cdb0;
+  border-radius: 50%;
+  min-height: 45px;
+  min-width: 45px;
+  border: none;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
+}
+button:hover {
+  background-color: #a39879;
+  transition: all 0.3s ease;
+}
