@@ -1,4 +1,6 @@
-# ms-slideshow
+# lt-scrollbutton
+
+
 
 <!-- Auto Generated Below -->
 
@@ -7,7 +9,7 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `imgSrc` | `img-src` |             | `string` | `undefined` |
+| `title`  | `title`   |             | `string` | `undefined` |
 
 
 ----------------------------------------------
