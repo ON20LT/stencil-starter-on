@@ -47,6 +47,8 @@ export namespace Components {
     interface NkFlipcard {
         "imgSrc": string;
     }
+    interface NkRezensionen {
+    }
 }
 declare global {
     interface HTMLClDarkmodeElement extends Components.ClDarkmode, HTMLStencilElement {
@@ -97,6 +99,12 @@ declare global {
         prototype: HTMLNkFlipcardElement;
         new (): HTMLNkFlipcardElement;
     };
+    interface HTMLNkRezensionenElement extends Components.NkRezensionen, HTMLStencilElement {
+    }
+    var HTMLNkRezensionenElement: {
+        prototype: HTMLNkRezensionenElement;
+        new (): HTMLNkRezensionenElement;
+    };
     interface HTMLElementTagNameMap {
         "cl-darkmode": HTMLClDarkmodeElement;
         "cl-suche": HTMLClSucheElement;
@@ -106,6 +114,7 @@ declare global {
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
         "nk-flipcard": HTMLNkFlipcardElement;
+        "nk-rezensionen": HTMLNkRezensionenElement;
     }
 }
 declare namespace LocalJSX {
@@ -152,6 +161,8 @@ declare namespace LocalJSX {
     interface NkFlipcard {
         "imgSrc"?: string;
     }
+    interface NkRezensionen {
+    }
     interface IntrinsicElements {
         "cl-darkmode": ClDarkmode;
         "cl-suche": ClSuche;
@@ -161,6 +172,7 @@ declare namespace LocalJSX {
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
         "nk-flipcard": NkFlipcard;
+        "nk-rezensionen": NkRezensionen;
     }
 }
 export { LocalJSX as JSX };
@@ -175,6 +187,7 @@ declare module "@stencil/core" {
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
             "nk-flipcard": LocalJSX.NkFlipcard & JSXBase.HTMLAttributes<HTMLNkFlipcardElement>;
+            "nk-rezensionen": LocalJSX.NkRezensionen & JSXBase.HTMLAttributes<HTMLNkRezensionenElement>;
         }
     }
 }
