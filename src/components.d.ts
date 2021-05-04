@@ -34,6 +34,9 @@ export namespace Components {
     }
     interface MsSlideshow {
         "imgSrc": string;
+        "slideDrei": HTMLElement;
+        "slideEins": HTMLElement;
+        "slideZwei": HTMLElement;
     }
 }
 declare global {
@@ -97,6 +100,9 @@ declare namespace LocalJSX {
     }
     interface MsSlideshow {
         "imgSrc"?: string;
+        "slideDrei"?: HTMLElement;
+        "slideEins"?: HTMLElement;
+        "slideZwei"?: HTMLElement;
     }
     interface IntrinsicElements {
         "cl-darkmode": ClDarkmode;
