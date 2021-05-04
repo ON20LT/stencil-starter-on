@@ -69,6 +69,59 @@
       </div>
     </ms-fotogalerie>
 
+    <!--Galerie mit Filtermöglichkeit-->
+    <lt-filtergalerie>
+      <div class="container">
+        <ul class="filter-menu">
+          <li data-target="all">Alle</li>
+          <li data-target="filter1">Filter 1</li>
+          <li data-target="filter2">Filter 2</li>
+          <li data-target="filter3">Filter 3</li>
+        </ul>
+
+        <ul class="filter-item" slot="galerie">
+          <li data-item="filter1">
+            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter3">
+            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter1">
+            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter1">
+            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter2">
+            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter1">
+            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter2">
+            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+          </li>
+
+          <li data-item="filter2">
+            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+          </li>
+
+          <li data-item="filter3">
+            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter3">
+            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter3">
+            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+          </li>
+          <li data-item="filter2">
+            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+          </li>
+        </ul>
+      </div>
+    </lt-filtergalerie>
+
     <nk-flipcard>
       <slot slot="card-front"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/beach.jpg" alt="Mutter und Kind am Strand" /></slot>
       <slot slot="card-back">Lust auf Meer? Finde Deinen Sommertraum bei ONbnb!</slot>

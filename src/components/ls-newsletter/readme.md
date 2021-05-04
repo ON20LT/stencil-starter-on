@@ -17,8 +17,8 @@
 
 | Event        | Description | Type               |
 | ------------ | ----------- | ------------------ |
+| `emailInfo`  |             | `CustomEvent<any>` |
 | `emailInput` |             | `CustomEvent<any>` |
-| `formObject` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------
