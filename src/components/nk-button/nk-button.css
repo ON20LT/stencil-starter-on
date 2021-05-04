@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  /* Farbschema ONBB */
+  --buttons: #5A6794;
+  --effect: #1C2135;
+  --accent: #DBCDB0;
+  --black: #13152c;
+  --white: #ffffff;
+  
+}
+
+.btn {
+  background: var(--buttons);
+  color: var(--white);
+  border-radius: 4px;
+  padding: 0 12px;
+  height: 38px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: var(--effect);
+}

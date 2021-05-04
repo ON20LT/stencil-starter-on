@@ -44,6 +44,16 @@ export namespace Components {
     interface MsSlideshow {
         "imgSrc": string;
     }
+    interface NkButton {
+        "appearance": string;
+        "text": string;
+    }
+    interface NkEasteregg {
+        "appearance": string;
+        "closeIcon": string;
+        "header": string;
+        "isopen": boolean;
+    }
     interface NkFlipcard {
         "imgSrc": string;
     }
@@ -93,6 +103,18 @@ declare global {
         prototype: HTMLMsSlideshowElement;
         new (): HTMLMsSlideshowElement;
     };
+    interface HTMLNkButtonElement extends Components.NkButton, HTMLStencilElement {
+    }
+    var HTMLNkButtonElement: {
+        prototype: HTMLNkButtonElement;
+        new (): HTMLNkButtonElement;
+    };
+    interface HTMLNkEastereggElement extends Components.NkEasteregg, HTMLStencilElement {
+    }
+    var HTMLNkEastereggElement: {
+        prototype: HTMLNkEastereggElement;
+        new (): HTMLNkEastereggElement;
+    };
     interface HTMLNkFlipcardElement extends Components.NkFlipcard, HTMLStencilElement {
     }
     var HTMLNkFlipcardElement: {
@@ -113,6 +135,8 @@ declare global {
         "lt-scrollbutton": HTMLLtScrollbuttonElement;
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
+        "nk-button": HTMLNkButtonElement;
+        "nk-easteregg": HTMLNkEastereggElement;
         "nk-flipcard": HTMLNkFlipcardElement;
         "nk-rezensionen": HTMLNkRezensionenElement;
     }
@@ -158,6 +182,16 @@ declare namespace LocalJSX {
     interface MsSlideshow {
         "imgSrc"?: string;
     }
+    interface NkButton {
+        "appearance"?: string;
+        "text"?: string;
+    }
+    interface NkEasteregg {
+        "appearance"?: string;
+        "closeIcon"?: string;
+        "header"?: string;
+        "isopen"?: boolean;
+    }
     interface NkFlipcard {
         "imgSrc"?: string;
     }
@@ -171,6 +205,8 @@ declare namespace LocalJSX {
         "lt-scrollbutton": LtScrollbutton;
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
+        "nk-button": NkButton;
+        "nk-easteregg": NkEasteregg;
         "nk-flipcard": NkFlipcard;
         "nk-rezensionen": NkRezensionen;
     }
@@ -186,6 +222,8 @@ declare module "@stencil/core" {
             "lt-scrollbutton": LocalJSX.LtScrollbutton & JSXBase.HTMLAttributes<HTMLLtScrollbuttonElement>;
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
+            "nk-button": LocalJSX.NkButton & JSXBase.HTMLAttributes<HTMLNkButtonElement>;
+            "nk-easteregg": LocalJSX.NkEasteregg & JSXBase.HTMLAttributes<HTMLNkEastereggElement>;
             "nk-flipcard": LocalJSX.NkFlipcard & JSXBase.HTMLAttributes<HTMLNkFlipcardElement>;
             "nk-rezensionen": LocalJSX.NkRezensionen & JSXBase.HTMLAttributes<HTMLNkRezensionenElement>;
         }

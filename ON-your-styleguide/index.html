@@ -100,6 +100,9 @@
         <img class="img" width="100%" height="100%" src="/src/assets/beach-1761410_1920.jpg" alt="strand-mit-palmen"/>
       </div>
     </ls-newsletter>
+   
+    <nk-button text="Feedback" ></nk-button>
+    <nk-easteregg header="Hi Josef" >Wir hoffen dir gefällt unsere Website :)</nk-easteregg>
     <ls-footer>
       <div slot="footer-links">
         <a href='#'>Impressum</a>
@@ -107,4 +110,13 @@
       </div>
     </ls-footer>
   </body>
+  <script>
+    var btn = document.querySelector('nk-button');
+    var easteregg = document.querySelector('nk-easteregg');
+    
+    btn.addEventListener('click', function () {
+      easteregg.isopen = true
+    });
+    
+    </script> 
 </html>
