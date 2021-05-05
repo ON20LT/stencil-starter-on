@@ -21,8 +21,10 @@
     justify-content: center;*/
   }
   
-  #pic1:hover {
-    background: var(--effect);
+  #pic1:hover,
+  #pic2:hover,
+  #pic3:hover {
+    background: #1C2135;
   }
 
 .card {
