@@ -56,7 +56,7 @@ export class Newsletter {
        }
     }
 
-    handleEmailInput (event: Event) {
+    handleEmailInput = (event: Event) => {
     event.preventDefault();
     console.log(this.checkMail(this.emailInput.value));
     console.log(this.emailInput.value);
