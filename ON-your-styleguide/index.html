@@ -69,6 +69,17 @@
       </div>
     </ms-fotogalerie>
 
+    <nk-flipcard>
+      <slot slot="card-front"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/beach.jpg" alt="Mutter und Kind am Strand" /></slot>
+      <slot slot="card-back">Lust auf Meer? Finde Deinen Sommertraum bei ONbnb!</slot>
+
+      <slot slot="card-front2"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/mountains.jpg" alt="Frau in den Bergen" /></slot>
+      <slot slot="card-back2">Wanderlust? Der Berg ruft! </slot>
+
+      <slot slot="card-front3"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/skiing.jpg" alt="Skipiste mit Lift und Skifahrer" /></slot>
+      <slot slot="card-back3">Adrenalinkick gefällig? Buche Dir jetzt Dein Abenteuer im Schnee!</slot>
+    </nk-flipcard>
+
     <!--Galerie mit Filtermöglichkeit-->
     <lt-filtergalerie>
       <div class="container">
@@ -81,57 +92,46 @@
 
         <ul class="filter-item" slot="galerie">
           <li data-item="filter1">
-            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+            <img src="/src/assets/world.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter3">
-            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+            <img src="/src/assets/camp.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter1">
-            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+            <img src="/src/assets/world.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter1">
-            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+            <img src="/src/assets/world.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter2">
-            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+            <img src="/src/assets/plane.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter1">
-            <img src="/src/assets/world.png" alt="Platzhalterbild" />
+            <img src="/src/assets/world.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter2">
-            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+            <img src="/src/assets/plane.jpg" alt="Platzhalterbild" />
           </li>
 
           <li data-item="filter2">
-            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+            <img src="/src/assets/plane.jpg" alt="Platzhalterbild" />
           </li>
 
           <li data-item="filter3">
-            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+            <img src="/src/assets/camp.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter3">
-            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+            <img src="/src/assets/camp.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter3">
-            <img src="/src/assets/camp.png" alt="Platzhalterbild" />
+            <img src="/src/assets/camp.jpg" alt="Platzhalterbild" />
           </li>
           <li data-item="filter2">
-            <img src="/src/assets/plane.png" alt="Platzhalterbild" />
+            <img src="/src/assets/plane.jpg" alt="Platzhalterbild" />
           </li>
         </ul>
       </div>
     </lt-filtergalerie>
-
-    <nk-flipcard>
-      <slot slot="card-front"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/beach.jpg" alt="Mutter und Kind am Strand" /></slot>
-      <slot slot="card-back">Lust auf Meer? Finde Deinen Sommertraum bei ONbnb!</slot>
-
-      <slot slot="card-front2"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/mountains.jpg" alt="Frau in den Bergen" /></slot>
-      <slot slot="card-back2">Wanderlust? Der Berg ruft! </slot>
-
-      <slot slot="card-front3"> <img class="pic" width="100%" src="/src/components/nk-flipcard/assets/skiing.jpg" alt="Skipiste mit Lift und Skifahrer" /></slot>
-      <slot slot="card-back3">Adrenalinkick gefällig? Buche Dir jetzt Dein Abenteuer im Schnee!</slot>
-    </nk-flipcard>
 
     <nk-rezensionen>
       <!-- <div slot="rezensionen-überschrift">Was andere über uns sagen:</div>-->

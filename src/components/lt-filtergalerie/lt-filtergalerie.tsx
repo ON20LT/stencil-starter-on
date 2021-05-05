@@ -1,13 +1,16 @@
-import { Component, Host, Element, h, Prop } from '@stencil/core';
+import { Component, Host, Element, h, Prop, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'lt-filtergalerie',
   styleUrl: 'lt-filtergalerie.css',
   shadow: true,
+  assetsDirs: ['assets'],
 })
 export class LTfiltergalerie {
   @Element() filtergalerieEl: HTMLElement;
-  @Prop({ reflect: true, mutable: true }) imgSrc: string;
+  @Prop() image1 = 'world.jpg';
+  @Prop() image2 = 'plane.jpg';
+  @Prop() image3 = 'camp.jpg';
 
   handleClick() {
     let btnSort = this.filtergalerieEl.shadowRoot.querySelector('.filter-menu').children;
@@ -47,42 +50,42 @@ export class LTfiltergalerie {
 
           <ul class="filter-item">
             <li data-item="filter1">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image1}`)} />
             </li>
             <li data-item="filter3">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image3}`)} />
             </li>
             <li data-item="filter1">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image1}`)} />
             </li>
             <li data-item="filter1">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image1}`)} />
             </li>
             <li data-item="filter2">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image2}`)} />
             </li>
             <li data-item="filter1">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image1}`)} />
             </li>
             <li data-item="filter2">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image2}`)} />
             </li>
 
             <li data-item="filter2">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image2}`)} />
             </li>
 
             <li data-item="filter3">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image3}`)} />
             </li>
             <li data-item="filter3">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image3}`)} />
             </li>
             <li data-item="filter3">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image3}`)} />
             </li>
             <li data-item="filter2">
-              <img src={this.imgSrc} />
+              <img src={getAssetPath(`./assets/${this.image2}`)} />
             </li>
           </ul>
         </div>

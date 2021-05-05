@@ -35,7 +35,9 @@ export namespace Components {
         "newsletterTitle": string;
     }
     interface LtFiltergalerie {
-        "imgSrc": string;
+        "image1": string;
+        "image2": string;
+        "image3": string;
     }
     interface LtScrollbutton {
     }
@@ -181,7 +183,9 @@ declare namespace LocalJSX {
         "onEmailInput"?: (event: CustomEvent<any>) => void;
     }
     interface LtFiltergalerie {
-        "imgSrc"?: string;
+        "image1"?: string;
+        "image2"?: string;
+        "image3"?: string;
     }
     interface LtScrollbutton {
     }
