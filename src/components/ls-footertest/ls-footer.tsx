@@ -12,7 +12,7 @@ export class LsFootertest {
 
   @Prop({reflect:true, mutable:true})
 
-  getFooterLinks(): HTMLLIElement[]{//mit Fremdcode
+  getFooterLinks(): HTMLLinkElement[]{//mit Fremdcode
     const allLinks = [];
 
     const slotElement = this.element.querySelector('[slot="footer-links"]');
