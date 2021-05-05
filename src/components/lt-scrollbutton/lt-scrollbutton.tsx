@@ -1,4 +1,4 @@
-import { Component, Element, Prop, h, State } from '@stencil/core';
+import { Component, Element, h, State } from '@stencil/core';
 
 @Component({
   tag: 'lt-scrollbutton',
@@ -7,8 +7,6 @@ import { Component, Element, Prop, h, State } from '@stencil/core';
 })
 export class LTscrollbutton {
   @Element() scrollEl: HTMLElement;
-
-  @Prop() title: string;
 
   @State() toggle: boolean = false;
 

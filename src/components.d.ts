@@ -34,8 +34,12 @@ export namespace Components {
         "img": string;
         "newsletterTitle": string;
     }
+    interface LtFiltergalerie {
+        "image1": string;
+        "image2": string;
+        "image3": string;
+    }
     interface LtScrollbutton {
-        "title": string;
     }
     interface MsFotogalerie {
         "imgSrc": string;
@@ -84,6 +88,12 @@ declare global {
         prototype: HTMLLsNewsletterElement;
         new (): HTMLLsNewsletterElement;
     };
+    interface HTMLLtFiltergalerieElement extends Components.LtFiltergalerie, HTMLStencilElement {
+    }
+    var HTMLLtFiltergalerieElement: {
+        prototype: HTMLLtFiltergalerieElement;
+        new (): HTMLLtFiltergalerieElement;
+    };
     interface HTMLLtScrollbuttonElement extends Components.LtScrollbutton, HTMLStencilElement {
     }
     var HTMLLtScrollbuttonElement: {
@@ -131,6 +141,7 @@ declare global {
         "cl-suche": HTMLClSucheElement;
         "ls-footer": HTMLLsFooterElement;
         "ls-newsletter": HTMLLsNewsletterElement;
+        "lt-filtergalerie": HTMLLtFiltergalerieElement;
         "lt-scrollbutton": HTMLLtScrollbuttonElement;
         "ms-fotogalerie": HTMLMsFotogalerieElement;
         "ms-slideshow": HTMLMsSlideshowElement;
@@ -171,8 +182,12 @@ declare namespace LocalJSX {
         "onEmailInfo"?: (event: CustomEvent<any>) => void;
         "onEmailInput"?: (event: CustomEvent<any>) => void;
     }
+    interface LtFiltergalerie {
+        "image1"?: string;
+        "image2"?: string;
+        "image3"?: string;
+    }
     interface LtScrollbutton {
-        "title"?: string;
     }
     interface MsFotogalerie {
         "imgSrc"?: string;
@@ -200,6 +215,7 @@ declare namespace LocalJSX {
         "cl-suche": ClSuche;
         "ls-footer": LsFooter;
         "ls-newsletter": LsNewsletter;
+        "lt-filtergalerie": LtFiltergalerie;
         "lt-scrollbutton": LtScrollbutton;
         "ms-fotogalerie": MsFotogalerie;
         "ms-slideshow": MsSlideshow;
@@ -217,6 +233,7 @@ declare module "@stencil/core" {
             "cl-suche": LocalJSX.ClSuche & JSXBase.HTMLAttributes<HTMLClSucheElement>;
             "ls-footer": LocalJSX.LsFooter & JSXBase.HTMLAttributes<HTMLLsFooterElement>;
             "ls-newsletter": LocalJSX.LsNewsletter & JSXBase.HTMLAttributes<HTMLLsNewsletterElement>;
+            "lt-filtergalerie": LocalJSX.LtFiltergalerie & JSXBase.HTMLAttributes<HTMLLtFiltergalerieElement>;
             "lt-scrollbutton": LocalJSX.LtScrollbutton & JSXBase.HTMLAttributes<HTMLLtScrollbuttonElement>;
             "ms-fotogalerie": LocalJSX.MsFotogalerie & JSXBase.HTMLAttributes<HTMLMsFotogalerieElement>;
             "ms-slideshow": LocalJSX.MsSlideshow & JSXBase.HTMLAttributes<HTMLMsSlideshowElement>;
