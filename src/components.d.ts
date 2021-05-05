@@ -17,7 +17,6 @@ export namespace Components {
         "menuleiste": HTMLElement;
         "ort": HTMLElement;
         "suche": HTMLElement;
-        "tageimMonat": number [];
         "textc": string;
         "textg": string;
         "textn": string;
@@ -153,7 +152,6 @@ declare namespace LocalJSX {
         "menuleiste"?: HTMLElement;
         "ort"?: HTMLElement;
         "suche"?: HTMLElement;
-        "tageimMonat"?: number [];
         "textc"?: string;
         "textg"?: string;
         "textn"?: string;

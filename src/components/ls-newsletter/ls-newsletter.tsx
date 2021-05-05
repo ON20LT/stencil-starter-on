@@ -29,7 +29,7 @@ export class Newsletter {
                 inputEl.classList.add("is-success");
                 inputEl.classList.remove("is-error");
                 infoEl.textContent = message;
-            }       
+            }
     }
 
     setInputError(
@@ -51,7 +51,7 @@ export class Newsletter {
            this.setInputSuccess(this.emailInput,this.emailInfo,"Vielen Dank, dass du dich für unseren Newsletter angemeldet hast :)");
            return true;
        } else {
-           this.setInputError(this.emailInput,this.emailInfo, "Mensch Josef, musste schon richtig machen… bitte gebe eine gültige E-Mail Adresse an!");
+           this.setInputError(this.emailInput,this.emailInfo, "Mensch Josef, musste schon richtig machen… bitte gib eine gültige E-Mail Adresse an!");
            return false;
        }
     }
@@ -62,7 +62,7 @@ export class Newsletter {
     console.log(this.emailInput.value);
     if(this.checkMail(this.emailInput.value)) {
         this.emailInput.value="";
-    } 
+    }
 }
 
   render() {

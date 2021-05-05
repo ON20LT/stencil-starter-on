@@ -9,33 +9,13 @@ import { Component, Host, h, Prop } from '@stencil/core';
 
 export class suchleiste {
 
-/*
-  private handleInputNaechte (e: InputEvent) {
-    const target = e.target as HTMLInputElement;
-    this.naechte = target.valueAsNumber;
-  }
-
-
-
-/*
-onInput={this.handleInputvT}
-onInput={this.handleInputvM}
-onInput={this.handleInputvJ}
-*/
-
-
-
-
 @Prop() ort: HTMLElement = document.querySelector('.ort');
 @Prop() checkin: HTMLElement = document.querySelector('.checkin');
 @Prop() gaeste: HTMLElement = document.querySelector('.gaeste');
 @Prop() menuleiste: HTMLElement = document.querySelector('.menuleiste');
 @Prop() suche: HTMLElement = document.querySelector('.suche');
 
-
 @Prop() heute = new Date();
-
-@Prop() tageimMonat: number [] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 @Prop() valuevt: number;
 @Prop() valuevm: number;
@@ -46,7 +26,7 @@ onInput={this.handleInputvJ}
 
 
 
-
+//Ortseingabe - Überprüfung
 private ortIn = () => {
   if(this.valueo == null){
     this.valueo =  ". . .";
@@ -61,7 +41,7 @@ private ortCl = () => {
   this.valueo = "";
 }
 
-//
+//Datumseingabe - Überprüfung
 private checkinIn = () => {
   if (this.valuevt == null){
     this.valuevt = 0;
@@ -94,7 +74,7 @@ private checkinjCl = () => {
   this.valuevj = this.heute.getFullYear();
 }
 
-//
+//Nächteeingabe - Überprüfung
 private naechteIn = () => {
   if(this.valuen == null){
     this.valuen =  0;
@@ -109,7 +89,7 @@ private naechteCl = () => {
   this.valuen =  1;
 }
 
-//
+//Gästeeingabe - Überprüfung
 private gaesteIn = () => {
   if(this.valueg == null){
     this.valueg =  0;
@@ -124,6 +104,7 @@ private gaesteCl = () => {
   this.valueg =  1;
 }
 
+//Mitteilung asuzufüllender Elemente
 @Prop() texto: string = "";
 @Prop() textc: string = "";
 @Prop() textn: string = "";
