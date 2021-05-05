@@ -17,9 +17,9 @@ export class Newsletter {
 
     @Event()emailInput: HTMLInputElement;
 
-    @Event()emailInfo: HTMLInputElement;
+    @Event()emailInfo: HTMLElement;
 
-    //mit Fremdcod erarbeitet
+    // mit Fremdcode als Hilfestellung erarbeitet
     setInputSuccess(
         inputEl: HTMLInputElement |null,
         infoEl: HTMLElement |null,
@@ -47,7 +47,7 @@ export class Newsletter {
     checkMail(mail:string | undefined):boolean{
     console.log("checkMail");
        const format = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-       if(format.test(String(mail).toLowerCase())) {
+       if(format.test(String(mail))) {
            this.setInputSuccess(this.emailInput,this.emailInfo,"Vielen Dank, dass du dich für unseren Newsletter angemeldet hast :)");
            return true;
        } else {
@@ -83,7 +83,7 @@ export class Newsletter {
                         <div class="label-descr">
                             <label htmlFor="email-input">E-mail Adresse</label>
                                 <input id="email-input" type="text" ref={(emailInput) => this.emailInput = emailInput as HTMLInputElement} placeholder="example@onbnb.de"/>
-                                <p id="inputmail-info" ref={(emailInfo) => this.emailInfo = emailInfo as HTMLInputElement}></p>
+                                <p id="inputmail-info" ref={(emailInfo) => this.emailInfo = emailInfo as HTMLElement}></p>
                         </div>
                         <button type="submit" value="submit" id="submit-button">Jetzt anmelden</button>
                     </form>
