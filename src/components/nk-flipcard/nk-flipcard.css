@@ -2,6 +2,30 @@
   display: flex;
   justify-content: space-between;
 }
+#pic1,
+#pic2,
+#pic3 {
+  
+    background: #5A6794;
+    color: white;
+    border-radius: 4px;
+    margin: 2cm;
+    padding: 12px;
+    height: 38px;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 500;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+  }
+  
+  #pic1:hover,
+  #pic2:hover,
+  #pic3:hover {
+    background: #1C2135;
+  }
 
 .card {
   margin-top: 10px;

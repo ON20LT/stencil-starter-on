@@ -9,6 +9,10 @@ export class NkFlipcard{
 
   @Prop({reflect: true, mutable: true}) imgSrc: string;
 
+  private handleClick = () => {
+    alert("Vielen Dank für Dein Interesse!")
+  };
+
   render() {
     return (
       <Host>
@@ -21,25 +25,28 @@ export class NkFlipcard{
               </slot>
             </div>
             <div class="card-back">
-              <slot name="card-back">Lust auf Meer? Hier geht es zu Angeboten in Strandnähe</slot>
+              <slot name="card-back">Lust auf Meer? Finde Deinen Sommertraum bei ONbnb! </slot>
+              <button id="pic1" onClick={this.handleClick}>Jetzt buchen</button>
             </div>
             </div>
 
             <div class="card">
             <div class="card-front2">
-              <slot name="card-front2">Hallo</slot>
+              <slot name="card-front2"></slot>
             </div>
             <div class="card-back2">
-              <slot name="card-back2">Wie gehts</slot>
+              <slot name="card-back2"></slot>
+              <button id="pic2" onClick={this.handleClick}>Jetzt buchen</button>
             </div>
             </div>
 
             <div class="card">
           <div class="card-front3">
-              <slot name="card-front3">Hallo</slot>
+              <slot name="card-front3"></slot>
             </div>
             <div class="card-back3">
-              <slot name="card-back3">Wie gehts</slot>
+              <slot name="card-back3"></slot>
+              <button id="pic3" onClick={this.handleClick}>Jetzt buchen</button>
             </div>
             </div>
             </div>
