@@ -174,6 +174,7 @@
   margin-left: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .suche:active,
@@ -182,4 +183,8 @@
   outline: none;
   border: none;
   background-color: #a39879;
+}
+
+.body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
