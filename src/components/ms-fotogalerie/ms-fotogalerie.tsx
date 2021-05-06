@@ -8,6 +8,9 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class MsFotogalerie {
   @Prop({ reflect: true, mutable: true }) imgSrc: string;
 
+  private buchen() {
+    alert('Viel Spaß in deinem Urlaub!');
+  }
   render() {
     return (
       <Host>
@@ -24,6 +27,9 @@ export class MsFotogalerie {
                 <h1>Hotel</h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                 parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
               </p>
+              <button class="hotelBuchen" onClick={this.buchen}>
+                Hotel buchen
+              </button>
             </div>
           </div>
 
@@ -36,6 +42,9 @@ export class MsFotogalerie {
                 <h1>Hotel</h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                 parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
               </p>
+              <button class="hotelBuchen" onClick={this.buchen}>
+                Hotel buchen
+              </button>
             </div>
           </div>
 
@@ -48,6 +57,9 @@ export class MsFotogalerie {
                 <h1>Hotel</h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                 parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
               </p>
+              <button class="hotelBuchen" onClick={this.buchen}>
+                Hotel buchen
+              </button>
             </div>
           </div>
         </div>
@@ -62,6 +74,9 @@ export class MsFotogalerie {
                 <h1>Hotel</h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                 parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
               </p>
+              <button class="hotelBuchen" onClick={this.buchen}>
+                Hotel buchen
+              </button>
             </div>
           </div>
 
@@ -74,6 +89,9 @@ export class MsFotogalerie {
                 <h1>Hotel</h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                 parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
               </p>
+              <button class="hotelBuchen" onClick={this.buchen}>
+                Hotel buchen
+              </button>
             </div>
           </div>
 
@@ -86,6 +104,9 @@ export class MsFotogalerie {
                 <h1>Hotel</h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                 parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
               </p>
+              <button class="hotelBuchen" onClick={this.buchen}>
+                Hotel buchen
+              </button>
             </div>
           </div>
         </div>

@@ -38,3 +38,20 @@
 .hotelBeschreibung h1 {
   text-align: center;
 }
+
+.hotelBuchen {
+  cursor: pointer;
+  font-size: 1vw;
+  background-color: #1c2135;
+  text-align: center;
+  color: white;
+  border: none;
+  width: 100%;
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.hotelBuchen:hover {
+  background-color: #5a6794;
+}
