@@ -13,24 +13,24 @@ export class LTfiltergalerie {
   @Prop() image3 = 'camp.jpg';
 
   handleClick() {
-    let btnSort = this.filtergalerieEl.shadowRoot.querySelector('.filter-menu').children;
-    let sortImg = this.filtergalerieEl.shadowRoot.querySelector('.filter-item').children;
-    for (let i = 0; i < btnSort.length; i++) {
-      btnSort[i].addEventListener('click', function () {
-        for (let j = 0; j < btnSort.length; j++) {
-          btnSort[j].classList.remove('current');
+    let btnFilter = this.filtergalerieEl.shadowRoot.querySelector('.filter-menu').children;
+    let filterImg = this.filtergalerieEl.shadowRoot.querySelector('.filter-item').children;
+    for (let i = 0; i < btnFilter.length; i++) {
+      btnFilter[i].addEventListener('click', function () {
+        for (let j = 0; j < btnFilter.length; j++) {
+          btnFilter[j].classList.remove('choice');
         }
-        this.classList.add('current');
+        this.classList.add('choice');
 
         let targetImg = this.getAttribute('data-target');
 
-        for (let k = 0; k < sortImg.length; k++) {
-          sortImg[k].classList.remove('active');
-          sortImg[k].classList.add('delete');
+        for (let k = 0; k < filterImg.length; k++) {
+          filterImg[k].classList.remove('active');
+          filterImg[k].classList.add('hidden');
 
-          if (sortImg[k].getAttribute('data-item') == targetImg || targetImg == 'all') {
-            sortImg[k].classList.remove('delete');
-            sortImg[k].classList.add('active');
+          if (filterImg[k].getAttribute('data-item') == targetImg || targetImg == 'all') {
+            filterImg[k].classList.remove('hidden');
+            filterImg[k].classList.add('active');
           }
         }
       });
