@@ -25,7 +25,7 @@ export class NkFlipcard{
               </slot>
             </div>
             <div class="card-back">
-              <slot name="card-back">Lust auf Meer? Finde Deinen Sommertraum bei ONbnb! </slot>
+              <slot name="card-back"></slot>
               <button id="pic1" onClick={this.handleClick}>Jetzt buchen</button>
             </div>
             </div>
