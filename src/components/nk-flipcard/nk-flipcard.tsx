@@ -20,9 +20,7 @@ export class NkFlipcard{
         <div class="flipcard-wrapper">
           <div class="card">
             <div class="card-front">
-              <slot name="card-front">
-              <img class="pic" src={this.imgSrc} />
-              </slot>
+              <slot name="card-front"></slot>
             </div>
             <div class="card-back">
               <slot name="card-back"></slot>
