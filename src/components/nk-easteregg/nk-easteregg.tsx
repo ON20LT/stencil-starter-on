@@ -43,12 +43,9 @@ export class NkEasteregg {
             <slot />
           </div>
           <div class="footer">
-            <button class="no" onClick={this.handleNoCLick}>
-              Naja...
-            </button>
-            <button class="yes" onClick={this.handleYesCLick}>
-              Ja, super!
-            </button>
+            <nk-button text="Naja.." appearance="standard" onClick={this.handleNoCLick}/>
+            <nk-button text="Ja, super!" appearance="effect" onClick={this.handleYesCLick}/>
+            
           </div>
         </div>
       </div>

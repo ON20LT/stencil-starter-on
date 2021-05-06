@@ -6,24 +6,41 @@
   --accent: #DBCDB0;
   --black: #13152c;
   --white: #ffffff;
+  --effecthover: #a39879; 
   
 }
 
 .btn {
-  background: var(--buttons);
-  color: var(--white);
   border-radius: 4px;
+  margin: 5px;
+  margin-bottom: 2px;
   padding: 0 12px;
   height: 38px;
   transition: 0.1s ease-in-out;
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 500;
-  display: flex;
+ /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
 }
 
-.btn:hover {
+.btn.standard {
+  background: var(--buttons);
+  color: var(--white);
+}
+
+
+.btn.standard:hover {
   background: var(--effect);
+}
+
+.btn.effect {
+  background: var(--accent);
+  color: var(--black);
+
+}
+
+.btn.effect:hover {
+  background: var(--effecthover);
 }
