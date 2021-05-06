@@ -12,28 +12,15 @@ export class NkRezensionen {
       <Host>
         <div class="wrapper">
         <h1 class="rezensionen-headline"><slot name="rezensionen-überschrift" /></h1>
-            
               <div class="rezensionen">
               <slot name="rezension_eins"></slot>
-              
             </div>
-          
-
-          
               <div class="rezensionen">
               <slot name="rezension_zwei"></slot>
-             
             </div>
-          
-
-          
               <div class="rezensionen">
               <slot name="rezension_drei"></slot>
-            
-            
           </div>
-
-
         </div>
       </Host>
     );
