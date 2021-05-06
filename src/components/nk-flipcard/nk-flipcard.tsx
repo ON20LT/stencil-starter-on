@@ -20,13 +20,11 @@ export class NkFlipcard{
         <div class="flipcard-wrapper">
           <div class="card">
             <div class="card-front">
-              <slot name="card-front">
-              <img class="pic" src={this.imgSrc} />
-              </slot>
+              <slot name="card-front"></slot>
             </div>
             <div class="card-back">
-              <slot name="card-back">Lust auf Meer? Finde Deinen Sommertraum bei ONbnb! </slot>
-              <button id="pic1" onClick={this.handleClick}>Jetzt buchen</button>
+              <slot name="card-back"></slot>
+              <nk-button text="Jetzt buchen" appearance="standard" onClick={this.handleClick}/>
             </div>
             </div>
 
@@ -36,7 +34,7 @@ export class NkFlipcard{
             </div>
             <div class="card-back2">
               <slot name="card-back2"></slot>
-              <button id="pic2" onClick={this.handleClick}>Jetzt buchen</button>
+              <nk-button text="Jetzt buchen" appearance="standard" onClick={this.handleClick}/>
             </div>
             </div>
 
@@ -46,7 +44,7 @@ export class NkFlipcard{
             </div>
             <div class="card-back3">
               <slot name="card-back3"></slot>
-              <button id="pic3" onClick={this.handleClick}>Jetzt buchen</button>
+              <nk-button text="Jetzt buchen" appearance="standard" onClick={this.handleClick}/>
             </div>
             </div>
             </div>
