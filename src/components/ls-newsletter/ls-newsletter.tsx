@@ -26,8 +26,8 @@ export class Newsletter {
         message: string
         ) :void{
             if(inputEl && infoEl) {
-                inputEl.classList.add("is-success");
-                inputEl.classList.remove("is-error");
+                inputEl&&infoEl.classList.add("is-success");
+                inputEl&&infoEl.classList.remove("is-error");
                 infoEl.textContent = message;
             }
     }
@@ -38,8 +38,8 @@ export class Newsletter {
         message: string
     ):void {
         if(inputEl&&infoEl){
-            inputEl.classList.remove("is-success");
-            inputEl.classList.add("is-error");
+            inputEl&&infoEl.classList.remove("is-success");
+            inputEl&&infoEl.classList.add("is-error");
             infoEl.textContent = message;
         }
     }
@@ -51,7 +51,7 @@ export class Newsletter {
            this.setInputSuccess(this.emailInput,this.emailInfo,"Vielen Dank, dass du dich für unseren Newsletter angemeldet hast :)");
            return true;
        } else {
-           this.setInputError(this.emailInput,this.emailInfo, "Mensch Josef, musste schon richtig machen… bitte gib eine gültige E-Mail Adresse an!");
+           this.setInputError(this.emailInput,this.emailInfo, "Bitte gib eine gültige E-Mail Adresse an!");
            return false;
        }
     }

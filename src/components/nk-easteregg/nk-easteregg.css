@@ -56,7 +56,7 @@ border-bottom: 1px solid var(--line);
 .wrapper .modal .header h6 {
 margin: 0;
 line-height: 1;
-font-family: sans-serif;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-size: 16px;
 }
 
@@ -79,7 +79,7 @@ background: var(--lightgrey);
 
 .wrapper .modal .body {
 padding: 16px;
-font-family: sans-serif;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-size: 14px;
 line-height: 21px;
 max-height: 320px;
@@ -98,20 +98,6 @@ align-items: center;
 border-top: 1px solid var(--line);
 }
 
-/*.no .yes {
-background: var(--buttons);
-color: var(--white);
-border-radius: 4px;
-padding: 0 12px;
-height: 38px;
-transition: 0.1s ease-in-out;
-cursor: pointer;
-font-family: sans-serif;
-font-weight: 500;
-display: flex;
-align-items: center;
-justify-content: center;
-}*/
 
 .btn:hover {
 background: var(--effect);
