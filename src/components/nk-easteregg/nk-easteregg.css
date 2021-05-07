@@ -84,7 +84,6 @@ font-size: 14px;
 line-height: 21px;
 max-height: 320px;
 height: auto;
-overflow-y: auto;
 color: var(--darkgrey);
 }
 
