@@ -11,8 +11,7 @@ export class NkEasteregg {
     mutable: true,
     reflect: true,
   })
-  @Prop()
-  header: string;
+  @Prop() header: string;
   @Prop() appearance: string;
   @Prop() isopen: boolean;
   @Prop() closeIcon = 'icon_x.svg';
@@ -31,7 +30,7 @@ export class NkEasteregg {
   render() {
     return (
       <div class={this.isopen ? 'wrapper is-open' : 'wrapper'}>
-        <div class="background" onClick={this.handleCancel} />
+        <div class="background"/>
         <div class="modal">
           <div class="header">
             <h6>{this.header}</h6>
